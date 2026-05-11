@@ -1931,6 +1931,148 @@
       text-transform: uppercase;
       margin-top: 2px;
     }
+
+    /* ========== FAQ ========== */
+    .faq-section {
+      position: relative;
+    }
+
+    .faq-list {
+      max-width: 56rem;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    /* Native <details>/<summary> styled as an accordion. No JS needed. */
+    .faq-item {
+      background: rgba(17, 24, 39, 0.4);
+      border: 1px solid var(--border);
+      border-left: 3px solid rgba(191, 155, 107, 0.35);
+      transition: border-color 0.3s, background 0.3s;
+    }
+
+    .faq-item[open] {
+      border-color: rgba(191, 155, 107, 0.6);
+      border-left-color: var(--primary);
+      background: rgba(17, 24, 39, 0.6);
+    }
+
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 1.125rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--foreground);
+      transition: color 0.2s;
+    }
+
+    @media (min-width: 768px) {
+      .faq-item summary {
+        font-size: 1.15rem;
+        padding: 1.25rem 1.75rem;
+      }
+    }
+
+    /* Hide the default arrow across browsers */
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::marker { content: ''; }
+
+    .faq-item summary:hover { color: var(--primary); }
+    .faq-item summary:focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+
+    /* Custom +/- indicator using pseudo-elements, rotates on open */
+    .faq-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      position: relative;
+      border: 1px solid rgba(191, 155, 107, 0.5);
+      border-radius: 50%;
+      transition: transform 0.3s, border-color 0.3s, background 0.3s;
+    }
+
+    .faq-icon::before,
+    .faq-icon::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background: var(--primary);
+      transition: opacity 0.3s;
+    }
+
+    .faq-icon::before {
+      /* horizontal bar */
+      width: 12px;
+      height: 2px;
+      transform: translate(-50%, -50%);
+    }
+
+    .faq-icon::after {
+      /* vertical bar — hidden when open to become a minus */
+      width: 2px;
+      height: 12px;
+      transform: translate(-50%, -50%);
+    }
+
+    .faq-item[open] .faq-icon {
+      background: rgba(191, 155, 107, 0.1);
+      border-color: var(--primary);
+      transform: rotate(180deg);
+    }
+
+    .faq-item[open] .faq-icon::after { opacity: 0; }
+
+    .faq-answer {
+      padding: 0 1.5rem 1.25rem;
+      color: rgba(248, 250, 252, 0.82);
+      line-height: 1.7;
+      font-size: 0.95rem;
+      border-top: 1px solid rgba(100, 116, 139, 0.2);
+      padding-top: 1.125rem;
+      margin-top: 0.25rem;
+    }
+
+    @media (min-width: 768px) {
+      .faq-answer {
+        padding: 1.125rem 1.75rem 1.5rem;
+        font-size: 1rem;
+      }
+    }
+
+    .faq-answer a {
+      color: var(--primary);
+      border-bottom: 1px solid rgba(191, 155, 107, 0.4);
+      transition: border-color 0.2s;
+    }
+
+    .faq-answer a:hover { border-bottom-color: var(--primary); }
+
+    .faq-cta {
+      text-align: center;
+      margin-top: 2.5rem;
+      color: var(--muted-foreground);
+      font-size: 0.95rem;
+    }
+
+    .faq-cta a {
+      color: var(--primary);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .faq-cta a:hover { color: var(--foreground); }
   </style>
   <link rel="stylesheet" href="assets/polish.css">
   <script type="application/ld+json" data-jsonld="legal-service">
@@ -2029,6 +2171,70 @@
       "worstRating": "1",
       "reviewCount": "6"
     }
+  }
+  </script>
+  <script type="application/ld+json" data-jsonld="faq">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is the consultation really free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Every initial consultation with Hoffman Legal is 100% free and confidential, with no obligation to hire us. Call (954) 459-4236 or submit the contact form and we will get back to you quickly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How quickly will someone get back to me?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Attorney David Hoffman personally returns calls 24/7, including nights and weekends. Legal emergencies do not wait for business hours, and neither do we."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas of Florida do you serve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hoffman Legal is based in Dania Beach and primarily serves Broward, Miami-Dade, and Palm Beach counties. Representation is available throughout Florida depending on the matter."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I do right after an arrest or accident?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Stay calm, do not discuss the facts with police, insurance adjusters, or anyone other than a lawyer, and call an attorney as soon as possible. Anything you say, write, or post can be used later. In an accident, if you are able, document the scene and get medical attention even if you feel fine."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a lawyer for a minor offense?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Even a misdemeanor can affect your permanent record, employment, professional licenses, driving privileges, or immigration status. A short consultation will make clear what is actually at stake before you decide."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will my conversation be confidential?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Attorney-client privilege protects what you share with David during a consultation. Note that simply submitting the website contact form does not by itself create the attorney-client relationship — privilege attaches once you speak with us or we are formally engaged."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I bring to my consultation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bring any paperwork you have received — citation, arrest report, court notice, accident report, insurance correspondence — along with a list of your questions. Do not worry if you do not have everything; David can start with what you remember."
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -2343,6 +2549,104 @@
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="section faq-section" id="faq">
+    <div class="section-header">
+      <p class="section-subtitle">Common Questions</p>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="faq-list" data-reveal>
+      <details class="faq-item">
+        <summary>
+          <span>Is the consultation really free?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-answer">
+          Yes. Every initial consultation with Hoffman Legal is <strong>100% free and confidential</strong>, with no
+          obligation to hire us. Call <a href="tel:9544594236">(954) 459-4236</a> or submit the
+          <a href="#contact">contact form</a> and we will get back to you quickly.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>How quickly will someone get back to me?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-answer">
+          Attorney David Hoffman personally returns calls <strong>24/7</strong>, including nights and weekends. Legal
+          emergencies do not wait for business hours, and neither do we.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>What areas of Florida do you serve?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-answer">
+          Hoffman Legal is based in Dania Beach and primarily serves <strong>Broward, Miami-Dade, and Palm Beach
+          counties</strong>. Representation is available throughout Florida depending on the matter.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>What should I do right after an arrest or accident?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-answer">
+          Stay calm and <strong>do not discuss the facts with police, insurance adjusters, or anyone other than a
+          lawyer</strong> — anything you say, write, or post online can be used against you later. Call an attorney as
+          soon as possible. In an accident, if you are able, document the scene and get medical attention even if you
+          feel fine; symptoms often appear hours or days later.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>Do I need a lawyer for a minor offense?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-answer">
+          Even a misdemeanor can affect your <strong>permanent record, employment, professional licenses, driving
+          privileges, or immigration status</strong>. A short consultation will make clear what is actually at stake
+          before you decide.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>Will my conversation be confidential?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-answer">
+          Yes. <strong>Attorney-client privilege</strong> protects what you share with David during a consultation.
+          Note that simply submitting the website contact form does not by itself create the attorney-client
+          relationship — privilege attaches once you speak with us or we are formally engaged.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <span>What should I bring to my consultation?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </summary>
+        <div class="faq-answer">
+          Bring any paperwork you have received — citation, arrest report, court notice, accident report, insurance
+          correspondence — along with a list of your questions. Do not worry if you do not have everything; David can
+          start with what you remember.
+        </div>
+      </details>
+    </div>
+
+    <p class="faq-cta">
+      Still have questions? <a href="#contact">Request a free consultation</a> or call
+      <a href="tel:9544594236">(954) 459-4236</a>.
+    </p>
+  </section>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-inner">
@@ -2359,6 +2663,7 @@
         <a href="#why-us">Why Us</a>
         <a href="#reviews">Reviews</a>
         <a href="#attorney">Attorney</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
       <div class="footer-divider">
