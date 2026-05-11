@@ -2,6 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-50SJMTCXDQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-50SJMTCXDQ');
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy | Hoffman Legal</title>
   <meta name="description" content="Privacy Policy for Hoffman Legal. How we collect, use, and protect information submitted through hoffman.legal.">
@@ -111,18 +119,6 @@
       margin: 1.5rem auto;
     }
 
-    /* Draft notice */
-    .draft-notice {
-      max-width: 880px;
-      margin: 2rem auto 0;
-      padding: 1.25rem 1.5rem;
-      background: rgba(191, 155, 107, 0.08);
-      border-left: 3px solid var(--primary);
-      color: rgba(248, 250, 252, 0.88);
-      font-size: 0.9rem;
-      line-height: 1.65;
-    }
-
     /* Content */
     .legal-main {
       flex: 1;
@@ -183,8 +179,53 @@
       color: rgba(148, 163, 184, 0.8);
     }
     .legal-footer-links a:hover { color: var(--primary); }
+  
+    /* Practice Areas → Personal Injury expandable subnav (added by inject_site_updates.py) */
+    .nav-dropdown-sub { position: relative; }
+    .nav-dropdown-sub .nav-dropdown-parent {
+      display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;
+    }
+    .nav-dropdown-sub .nav-dropdown-parent svg { width: 12px; height: 12px; opacity: 0.7; }
+    .nav-subdropdown {
+      position: absolute; top: 0; left: 100%;
+      min-width: 16rem;
+      background: var(--background);
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+      opacity: 0; visibility: hidden; transform: translateX(-6px);
+      transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
+      z-index: 60;
+    }
+    .nav-dropdown-sub:hover .nav-subdropdown,
+    .nav-dropdown-sub:focus-within .nav-subdropdown {
+      opacity: 1; visibility: visible; transform: translateX(0);
+    }
+    /* Mobile PI nested list inside the practice accordion */
+    .mobile-practice-pi { display: block; }
+    .mobile-pi-hub {
+      display: block; padding: 0.5rem 0; color: var(--muted-foreground);
+      font-weight: 600;
+    }
+    .mobile-pi-sublist {
+      display: block; padding-left: 1rem;
+      border-left: 1px solid rgba(191, 155, 107, 0.25);
+      margin: 0.25rem 0 0.5rem;
+    }
+    .mobile-pi-sublist a {
+      display: block; padding: 0.4rem 0; font-size: 0.95rem;
+      color: var(--muted-foreground);
+    }
+    .mobile-pi-sublist a:hover { color: var(--primary); }
+
   </style>
   <link rel="stylesheet" href="assets/polish.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" type="image/png" sizes="32x32" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <meta property="og:image" content="https://hoffman.legal/dhh-headshot.jpg">
+  <meta property="og:image:alt" content="Attorney David Hoffman, Hoffman Legal">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://hoffman.legal/dhh-headshot.jpg">
 </head>
 
 <body>
@@ -203,11 +244,6 @@
     <h1>Privacy Policy</h1>
     <div class="divider"></div>
     <p class="meta">Last Updated: November 1, 2025</p>
-    <div class="draft-notice">
-      <strong>Please review before publishing.</strong> This privacy policy is a working draft written to reflect the
-      site's current functionality (Formspree contact form, Google Analytics, embedded Google Maps, and a basic
-      informational chatbot). Hoffman Legal should review and customize the language before relying on it publicly.
-    </div>
   </section>
 
   <main class="legal-main">
@@ -233,8 +269,7 @@
     <p>
       Like most websites, we collect standard technical information automatically, including your IP address, browser
       type and version, device type, referring URL, pages viewed, time spent on pages, and general location inferred
-      from your IP address. We use Google Analytics (measurement ID G-50SJMTCXDQ) to help us understand how visitors
-      use the Site.
+      from your IP address. We use Google Analytics to help us understand how visitors use the Site.
     </p>
 
     <h3>Third-party embeds</h3>
@@ -352,5 +387,6 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
   <script src="assets/polish.js" defer></script>
+  <script src="assets/analytics.js" defer></script>
 </body>
 </html>
