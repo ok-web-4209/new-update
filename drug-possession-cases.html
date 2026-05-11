@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-50SJMTCXDQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-50SJMTCXDQ');
+</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Hoffman Legal">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <title>Drug Possession Cases | Hoffman Legal</title>
+  <meta name="description" content="Possession cases may involve questions about ownership, knowledge, control, illegal searches, constructive possession, and whether law enforcement handled evidence properly.">
+  <style>
+    /* ========== CSS Variables & Base ========== */
+    :root {
+      --background: hsl(222, 47%, 11%);
+      --foreground: hsl(210, 40%, 98%);
+      --card: hsl(217, 33%, 17%);
+      --card-foreground: hsl(210, 40%, 98%);
+      --primary: hsl(40, 52%, 55%);
+      --primary-foreground: hsl(222, 47%, 11%);
+      --secondary: hsl(217, 33%, 17%);
+      --secondary-foreground: hsl(210, 40%, 98%);
+      --muted: hsl(217, 33%, 17%);
+      --muted-foreground: hsl(215, 20%, 65%);
+      --border: hsl(217, 33%, 22%);
+      --rose-gold: #C5A47E;
+      --muted-gray: #9A9A9A;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--background);
+      color: var(--foreground);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-serif);
+      font-weight: 600;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* ========== Header ========== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      height: 90px;
+      background: rgba(17, 24, 39, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(191, 155, 107, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .header.scrolled {
+      height: 80px;
+      background: rgba(17, 24, 39, 1);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .header-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      height: 100%;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Logo */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+    }
+
+    .logo-box {
+      width: 44px;
+      height: 44px;
+      border: 1.5px solid var(--rose-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-letter {
+      font-family: var(--font-serif);
+      font-size: 1.75rem;
+      color: var(--rose-gold);
+      font-weight: 400;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-title {
+      font-size: 0.875rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--rose-gold);
+      line-height: 1.2;
+    }
+
+    .logo-subtitle {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--muted-gray);
+      margin-top: 2px;
+    }
+
+    /* Desktop Nav */
+    .nav-desktop {
+      display: none;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    @media (min-width: 1024px) {
+      .nav-desktop {
+        display: flex;
+      }
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: 600;
+      color: var(--muted-foreground);
+      transition: color 0.3s;
+      position: relative;
+      padding: 0.25rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .nav-link:hover {
+      color: var(--primary);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.3s;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-link svg {
+      width: 14px;
+      height: 14px;
+      transition: transform 0.2s;
+    }
+
+    .nav-item:hover .nav-link svg {
+      transform: rotate(180deg);
+    }
+
+    /* Dropdown Menu */
+    .nav-dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      margin-top: 0.5rem;
+      width: 16rem;
+      background: var(--background);
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.2s;
+      z-index: 50;
+    }
+
+    .nav-item:hover .nav-dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .nav-dropdown-item {
+      display: block;
+      padding: 0.625rem 1rem;
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+      border-left: 2px solid transparent;
+      transition: all 0.3s;
+    }
+
+    .nav-dropdown-item:hover {
+      color: var(--primary);
+      background: rgba(30, 41, 59, 0.5);
+      border-left-color: var(--primary);
+    }
+
+    .nav-phone {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--primary);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .nav-cta {
+      background: var(--primary);
+      color: var(--primary-foreground);
+      padding: 0.75rem 1.5rem;
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      transition: all 0.3s;
+    }
+
+    .nav-cta:hover {
+      background: var(--foreground);
+      color: var(--background);
+    }
+
+    /* Mobile Menu Toggle */
+    .mobile-toggle {
+      display: block;
+      background: none;
+      border: none;
+      color: var(--foreground);
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      .mobile-toggle {
+        display: none;
+      }
+    }
+
+    .mobile-toggle svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      background: var(--background);
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      padding: 6rem 2rem 2rem;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .mobile-menu.open {
+      transform: translateX(0);
+    }
+
+    .mobile-nav-link {
+      display: block;
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: 600;
+      color: var(--foreground);
+      padding: 0.75rem 0;
+      transition: color 0.3s;
+    }
+
+    .mobile-nav-link:hover {
+      color: var(--primary);
+    }
+
+    /* Mobile Practice Areas Accordion */
+    .mobile-practice-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: 600;
+      color: var(--foreground);
+      padding: 0.75rem 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .mobile-practice-toggle:hover {
+      color: var(--primary);
+    }
+
+    .mobile-practice-toggle svg {
+      width: 20px;
+      height: 20px;
+      transition: transform 0.2s;
+    }
+
+    .mobile-practice-toggle.open svg {
+      transform: rotate(180deg);
+    }
+
+    .mobile-practice-submenu {
+      display: none;
+      padding-left: 1rem;
+      margin-left: 0.5rem;
+      margin-top: 0.75rem;
+      margin-bottom: 0.5rem;
+      border-left: 2px solid rgba(191, 155, 107, 0.3);
+    }
+
+    .mobile-practice-submenu.open {
+      display: block;
+    }
+
+    .mobile-practice-submenu a {
+      display: block;
+      padding: 0.5rem 0;
+      font-size: 1rem;
+      color: var(--muted-foreground);
+      transition: color 0.3s;
+    }
+
+    .mobile-practice-submenu a:hover {
+      color: var(--primary);
+    }
+
+    .mobile-cta-container {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .mobile-phone {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 1.125rem;
+    }
+
+    .mobile-cta {
+      display: block;
+      background: var(--primary);
+      color: var(--primary-foreground);
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.875rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+
+    /* ========== Hero ========== */
+    .hero {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: 55% center;
+      animation: kenBurns 20s infinite alternate ease-in-out;
+    }
+
+    @keyframes kenBurns {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.15); }
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, 
+        hsla(222, 47%, 11%, 0.95) 0%, 
+        hsla(222, 47%, 11%, 0.6) 50%, 
+        hsla(222, 47%, 11%, 0.2) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 6rem 2rem 5rem;
+      max-width: 56rem;
+    }
+
+    @media (min-width: 768px) {
+      .hero-content {
+        padding: 6rem 8%;
+      }
+    }
+
+    /* Mobile: ensure scroll indicator doesn't overlap CTA */
+    @media (max-width: 767px) {
+      .scroll-indicator {
+        bottom: 1rem;
+      }
+    }
+
+    .hero-tagline {
+      display: inline-block;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-weight: 700;
+      font-size: 0.875rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: 2.25rem;
+      line-height: 1.2;
+      margin-bottom: 2rem;
+      text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    @media (min-width: 768px) {
+      .hero-title {
+        font-size: 3rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero-title {
+        font-size: 3.75rem;
+      }
+    }
+
+    .hero-title span {
+      color: var(--primary);
+    }
+
+    .hero-description {
+      max-width: 42rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-description p:first-child {
+      color: rgba(248, 250, 252, 0.9);
+      font-size: 1rem;
+      line-height: 1.7;
+      border-left: 2px solid var(--primary);
+      padding-left: 1.25rem;
+    }
+
+    @media (min-width: 768px) {
+      .hero-description p:first-child {
+        font-size: 1.125rem;
+      }
+    }
+
+    .hero-description p:last-child {
+      color: var(--muted-foreground);
+      font-size: 0.875rem;
+      line-height: 1.7;
+      margin-top: 1rem;
+      padding-left: 1.25rem;
+    }
+
+    @media (min-width: 768px) {
+      .hero-description p:last-child {
+        font-size: 1rem;
+      }
+    }
+
+    .hero-cta {
+      display: inline-block;
+      border: 2px solid var(--primary);
+      color: var(--foreground);
+      padding: 1rem 2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-weight: 700;
+      transition: all 0.3s;
+    }
+
+    @media (min-width: 768px) {
+      .hero-cta {
+        padding: 1rem 2.5rem;
+      }
+    }
+
+    .hero-cta:hover {
+      background: var(--primary);
+      color: var(--primary-foreground);
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 0.25rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .scroll-mouse {
+      width: 24px;
+      height: 40px;
+      border: 2px solid rgba(248, 250, 252, 0.4);
+      border-radius: 9999px;
+      display: flex;
+      justify-content: center;
+      padding-top: 0.5rem;
+    }
+
+    .scroll-dot {
+      width: 6px;
+      height: 12px;
+      background: var(--primary);
+      border-radius: 9999px;
+      animation: scrollBounce 1.5s infinite;
+    }
+
+    @keyframes scrollBounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+
+    /* ========== Section Styles ========== */
+    .section {
+      padding: 5rem 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .section {
+        padding: 8rem 5%;
+      }
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    @media (min-width: 768px) {
+      .section-header {
+        margin-bottom: 4rem;
+      }
+    }
+
+    .section-subtitle {
+      color: var(--primary);
+      font-style: italic;
+      font-family: var(--font-serif);
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .section-subtitle {
+        font-size: 1.25rem;
+      }
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 1.875rem;
+      color: var(--foreground);
+      margin-bottom: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .section-title {
+        font-size: 3rem;
+      }
+    }
+
+    .divider {
+      width: 5rem;
+      height: 2px;
+      background: var(--primary);
+      margin: 0 auto;
+    }
+
+    /* ========== Practice Areas ========== */
+    .practice-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .practice-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .practice-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+      }
+    }
+
+    .practice-card {
+      position: relative;
+      height: 320px;
+      background: rgba(30, 41, 59, 0.5);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.5s;
+    }
+
+    .practice-card:hover {
+      border-color: var(--primary);
+    }
+
+    .practice-icon-wrap {
+      position: absolute;
+      top: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+    }
+
+    .practice-icon {
+      width: 96px;
+      height: 96px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid rgba(191, 155, 107, 0.2);
+      border-radius: 50%;
+      background: rgba(191, 155, 107, 0.05);
+      transition: all 0.3s;
+    }
+
+    .practice-card:hover .practice-icon {
+      transform: translateY(-8px);
+      background: rgba(191, 155, 107, 0.1);
+    }
+
+    .practice-icon svg {
+      width: 40px;
+      height: 40px;
+      color: var(--primary);
+    }
+
+    .practice-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.5rem;
+      background: linear-gradient(to top, var(--background) 0%, rgba(17, 24, 39, 0.9) 50%, transparent 100%);
+      transition: all 0.3s;
+    }
+
+    .practice-card:hover .practice-content {
+      border-left: 4px solid var(--primary);
+    }
+
+    .practice-title {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--foreground);
+      margin-bottom: 0.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .practice-title {
+        font-size: 1.5rem;
+      }
+    }
+
+    .practice-desc {
+      color: var(--muted-foreground);
+      font-size: 0.875rem;
+      line-height: 1.6;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: all 0.5s;
+    }
+
+    .practice-card:hover .practice-desc {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ========== Why Us ========== */
+    .bg-secondary {
+      background: var(--secondary);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      max-width: 1152px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .why-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .why-card {
+      background: rgba(17, 24, 39, 0.3);
+      border: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    @media (min-width: 768px) {
+      .why-card {
+        padding: 2.5rem;
+      }
+    }
+
+    .why-card:hover {
+      transform: translateY(-12px);
+      border-color: var(--primary);
+      background: rgba(17, 24, 39, 0.5);
+    }
+
+    .why-icon {
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .why-icon svg {
+      width: 48px;
+      height: 48px;
+      color: var(--primary);
+      transition: transform 0.3s;
+    }
+
+    .why-card:hover .why-icon svg {
+      transform: scale(1.1);
+    }
+
+    .why-title {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
+    }
+
+    @media (min-width: 768px) {
+      .why-title {
+        font-size: 1.5rem;
+      }
+    }
+
+    .why-desc {
+      color: var(--muted-foreground);
+      line-height: 1.7;
+    }
+
+    /* ========== Attorney ========== */
+    .attorney-section {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    @media (min-width: 1024px) {
+      .attorney-section {
+        flex-direction: row;
+      }
+    }
+
+    .attorney-image {
+      flex: 1;
+      min-height: 400px;
+      background-size: cover;
+      background-position: center 15%;
+    }
+
+    @media (min-width: 1024px) {
+      .attorney-image {
+        min-height: 700px;
+      }
+    }
+
+    .attorney-content {
+      flex: 1;
+      background: var(--foreground);
+      padding: 4rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @media (min-width: 768px) {
+      .attorney-content {
+        padding: 6rem 3rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .attorney-content {
+        padding: 6rem 4rem;
+      }
+    }
+
+    .attorney-subtitle {
+      color: var(--primary);
+      font-style: italic;
+      font-family: var(--font-serif);
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .attorney-subtitle {
+        font-size: 1.25rem;
+      }
+    }
+
+    .attorney-name {
+      font-family: var(--font-serif);
+      font-size: 1.875rem;
+      color: var(--background);
+      margin-bottom: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .attorney-name {
+        font-size: 2.25rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .attorney-name {
+        font-size: 3rem;
+      }
+    }
+
+    .attorney-divider {
+      width: 4rem;
+      height: 2px;
+      background: var(--primary);
+      margin-bottom: 2rem;
+    }
+
+    .attorney-text {
+      color: rgba(17, 24, 39, 0.7);
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .attorney-text {
+        font-size: 1.125rem;
+      }
+    }
+
+    .attorney-signature {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 2.25rem;
+      color: var(--primary);
+    }
+
+    @media (min-width: 768px) {
+      .attorney-signature {
+        font-size: 3rem;
+      }
+    }
+
+    /* ========== Contact ========== */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      max-width: 1152px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 1024px) {
+      .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+      }
+    }
+
+    .contact-info h3 {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-info > p {
+      color: var(--muted-foreground);
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-item svg {
+      width: 20px;
+      height: 20px;
+      color: var(--primary);
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+
+    .contact-item h4 {
+      font-weight: 600;
+      color: var(--foreground);
+      margin-bottom: 0.25rem;
+      font-family: var(--font-sans);
+      font-size: 1rem;
+    }
+
+    .contact-item p,
+    .contact-item a {
+      color: var(--muted-foreground);
+      transition: color 0.3s;
+    }
+
+    .contact-item a:hover {
+      color: var(--primary);
+    }
+
+    .contact-map {
+      margin-top: 2rem;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      border: 1px solid rgba(191, 155, 107, 0.3);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .contact-map iframe {
+      display: block;
+      filter: sepia(0.2) hue-rotate(20deg) saturate(1.3) brightness(0.9) contrast(1.1);
+      transition: filter 0.7s;
+    }
+
+    .contact-map:hover iframe {
+      filter: none;
+    }
+
+    .contact-form {
+      background: var(--secondary);
+      padding: 1.5rem;
+      border-top: 4px solid var(--primary);
+    }
+
+    @media (min-width: 768px) {
+      .contact-form {
+        padding: 2.5rem;
+      }
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-input,
+    .form-textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background: rgba(17, 24, 39, 0.5);
+      border: 1px solid var(--border);
+      color: var(--foreground);
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: var(--muted-foreground);
+    }
+
+    .form-input:focus,
+    .form-textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .form-input {
+      height: 48px;
+    }
+
+    .form-textarea {
+      resize: none;
+      min-height: 120px;
+    }
+
+    .form-btn {
+      width: 100%;
+      height: 48px;
+      background: var(--primary);
+      color: var(--primary-foreground);
+      border: none;
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .form-btn:hover {
+      background: var(--foreground);
+      color: var(--background);
+    }
+
+    /* ========== Defense Strategy ========== */
+    .strategy-section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .strategy-section::before,
+    .strategy-section::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(191, 155, 107, 0.5), transparent);
+    }
+
+    .strategy-section::before { top: 0; }
+    .strategy-section::after { bottom: 0; }
+
+    .strategy-content {
+      max-width: 56rem;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    .strategy-icon-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .strategy-icon {
+      padding: 1rem;
+      border: 1px solid rgba(191, 155, 107, 0.3);
+      border-radius: 50%;
+      background: rgba(17, 24, 39, 0.3);
+    }
+
+    .strategy-icon svg {
+      width: 40px;
+      height: 40px;
+      color: var(--primary);
+    }
+
+    .strategy-headline {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      color: var(--primary);
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .strategy-headline {
+        font-size: 1.875rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .strategy-headline {
+        font-size: 2.25rem;
+      }
+    }
+
+    .strategy-subheadline {
+      font-family: var(--font-serif);
+      font-size: 1.875rem;
+      color: var(--foreground);
+      margin-bottom: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .strategy-subheadline {
+        font-size: 2.25rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .strategy-subheadline {
+        font-size: 3rem;
+      }
+    }
+
+    .strategy-text {
+      color: var(--muted-foreground);
+      font-size: 1.125rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .strategy-text {
+        font-size: 1.25rem;
+      }
+    }
+
+    .strategy-text.highlight {
+      color: var(--foreground);
+      font-weight: 500;
+    }
+
+    .strategy-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .strategy-dots span {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .strategy-dots span:nth-child(1) { background: rgba(191, 155, 107, 0.6); }
+    .strategy-dots span:nth-child(2) { background: rgba(191, 155, 107, 0.4); }
+    .strategy-dots span:nth-child(3) { background: rgba(191, 155, 107, 0.2); }
+
+    /* ========== Footer ========== */
+    .footer {
+      position: relative;
+      background: hsl(222, 47%, 6%);
+      overflow: hidden;
+    }
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(191, 155, 107, 0.6), transparent);
+    }
+
+    .footer-inner {
+      max-width: 1152px;
+      margin: 0 auto;
+      padding: 4rem 1rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    @media (min-width: 768px) {
+      .footer-inner {
+        padding: 4rem 2rem;
+      }
+    }
+
+    .footer-main {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .footer-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem;
+      border: 1px solid rgba(191, 155, 107, 0.3);
+      border-radius: 50%;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-icon svg {
+      width: 24px;
+      height: 24px;
+      color: var(--primary);
+    }
+
+    .footer-tagline {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--foreground);
+      margin-bottom: 0.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .footer-tagline {
+        font-size: 1.5rem;
+      }
+    }
+
+    .footer-sub {
+      color: var(--muted-foreground);
+      font-size: 0.875rem;
+    }
+
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-nav a {
+      color: var(--muted-foreground);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      transition: color 0.3s;
+    }
+
+    .footer-nav a:hover {
+      color: var(--primary);
+    }
+
+    .footer-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-divider-line {
+      height: 1px;
+      width: 5rem;
+      background: linear-gradient(to right, transparent, rgba(191, 155, 107, 0.4));
+    }
+
+    @media (min-width: 768px) {
+      .footer-divider-line {
+        width: 8rem;
+      }
+    }
+
+    .footer-divider-line:last-child {
+      background: linear-gradient(to left, transparent, rgba(191, 155, 107, 0.4));
+    }
+
+    .footer-divider-diamond {
+      width: 8px;
+      height: 8px;
+      background: rgba(191, 155, 107, 0.6);
+      transform: rotate(45deg);
+    }
+
+    .footer-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-tag {
+      padding: 0.375rem 1rem;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted-foreground);
+      border: 1px solid rgba(100, 116, 139, 0.5);
+      border-radius: 9999px;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    .footer-tag:hover {
+      border-color: rgba(191, 155, 107, 0.5);
+      color: var(--primary);
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid rgba(100, 116, 139, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .footer-copyright {
+      color: rgba(148, 163, 184, 0.6);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .footer-links a {
+      color: rgba(148, 163, 184, 0.6);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    .footer-links-dot {
+      width: 4px;
+      height: 4px;
+      background: rgba(191, 155, 107, 0.4);
+      border-radius: 50%;
+    }
+
+    /* ========== Chatbot ========== */
+    .chatbot-toggle {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 100;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: var(--primary-foreground);
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s;
+    }
+
+    .chatbot-toggle:hover {
+      transform: scale(1.1);
+    }
+
+    .chatbot-toggle svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .chatbot-window {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 100;
+      width: 360px;
+      max-width: calc(100vw - 48px);
+      height: 500px;
+      max-height: calc(100vh - 100px);
+      background: var(--background);
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .chatbot-window.open {
+      display: flex;
+    }
+
+    .chatbot-header {
+      background: var(--secondary);
+      padding: 1rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .chatbot-header-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .chatbot-header-icon {
+      padding: 0.5rem;
+      background: rgba(191, 155, 107, 0.2);
+      border-radius: 50%;
+    }
+
+    .chatbot-header-icon svg {
+      width: 16px;
+      height: 16px;
+      color: var(--primary);
+    }
+
+    .chatbot-header h3 {
+      font-family: var(--font-serif);
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+
+    .chatbot-header p {
+      font-size: 0.75rem;
+      color: var(--muted-foreground);
+    }
+
+    .chatbot-close {
+      background: none;
+      border: none;
+      color: var(--muted-foreground);
+      cursor: pointer;
+      padding: 0.25rem;
+      transition: background 0.3s;
+      border-radius: 0.25rem;
+    }
+
+    .chatbot-close:hover {
+      background: rgba(17, 24, 39, 0.5);
+    }
+
+    .chatbot-close svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .chatbot-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .chat-message {
+      display: flex;
+    }
+
+    .chat-message.user {
+      justify-content: flex-end;
+    }
+
+    .chat-message.assistant {
+      justify-content: flex-start;
+    }
+
+    .chat-bubble {
+      max-width: 85%;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-size: 0.875rem;
+    }
+
+    .chat-message.user .chat-bubble {
+      background: var(--primary);
+      color: var(--primary-foreground);
+    }
+
+    .chat-message.assistant .chat-bubble {
+      background: var(--secondary);
+      color: var(--foreground);
+    }
+
+    .chatbot-input {
+      padding: 0.75rem;
+      border-top: 1px solid var(--border);
+      background: rgba(30, 41, 59, 0.5);
+    }
+
+    .chatbot-input-form {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .chatbot-input input {
+      flex: 1;
+      height: 40px;
+      padding: 0 1rem;
+      background: rgba(17, 24, 39, 0.5);
+      border: 1px solid var(--border);
+      color: var(--foreground);
+      font-size: 0.875rem;
+      border-radius: 0.25rem;
+    }
+
+    .chatbot-input input::placeholder {
+      color: var(--muted-foreground);
+    }
+
+    .chatbot-input input:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .chatbot-input button {
+      width: 40px;
+      height: 40px;
+      background: var(--primary);
+      border: none;
+      border-radius: 0.25rem;
+      color: var(--primary-foreground);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s;
+    }
+
+    .chatbot-input button:hover {
+      background: rgba(191, 155, 107, 0.9);
+    }
+
+    .chatbot-input button svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .chatbot-disclaimer {
+      font-size: 10px;
+      color: var(--muted-foreground);
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    /* Toast notification */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--secondary);
+      border: 1px solid var(--primary);
+      color: var(--foreground);
+      padding: 1rem 2rem;
+      border-radius: 0.25rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      z-index: 200;
+      display: none;
+    }
+
+    .toast.show {
+      display: block;
+      animation: fadeInUp 0.3s ease;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+  
+    /* ========== Service Pages ========== */
+    .service-hero { position: relative; padding: 11rem 1.5rem 5rem; background: linear-gradient(135deg, hsla(222,47%,11%,1), hsla(217,33%,17%,0.96)); overflow: hidden; }
+    .service-hero::after { content:''; position:absolute; inset:auto -10% -40% auto; width:520px; height:520px; background: radial-gradient(circle, rgba(197,164,126,.18), transparent 65%); }
+    .service-hero-inner { max-width: 1152px; margin:0 auto; position:relative; z-index:1; }
+    .breadcrumb { color: var(--muted-foreground); font-size:.75rem; text-transform:uppercase; letter-spacing:.14em; margin-bottom:1.5rem; }
+    .breadcrumb a { color: var(--primary); }
+    .service-icon-large { width:92px; height:92px; border:2px solid rgba(191,155,107,.25); border-radius:50%; display:flex; align-items:center; justify-content:center; background:rgba(191,155,107,.06); margin-bottom:1.5rem; }
+    .service-icon-large svg { color:var(--primary); width:44px; height:44px; }
+    .service-title { font-family:var(--font-serif); font-size:2.5rem; line-height:1.1; margin-bottom:1.25rem; }
+    .service-title span { color: var(--primary); }
+    .service-intro { max-width: 760px; color: rgba(248,250,252,.86); font-size:1.125rem; line-height:1.8; border-left:2px solid var(--primary); padding-left:1.25rem; }
+    .service-wrap { max-width:1152px; margin:0 auto; display:grid; grid-template-columns:1fr; gap:2rem; padding:5rem 1rem; }
+    @media (min-width:1024px){ .service-wrap{ grid-template-columns:minmax(0,1fr) 320px; padding:6rem 2rem; } .service-title{font-size:3.6rem;} }
+    .service-main { display:grid; gap:1.5rem; }
+    .content-card { background:rgba(30,41,59,.45); border:1px solid var(--border); padding:1.75rem; }
+    .content-card h2, .content-card h3 { color:var(--foreground); font-size:1.6rem; margin-bottom:.75rem; }
+    .content-card p, .content-card li { color:var(--muted-foreground); line-height:1.8; }
+    .content-card ul { padding-left:1.25rem; margin-top:.75rem; }
+    .service-sidebar { display:grid; gap:1.25rem; align-content:start; }
+    .side-card { background:var(--secondary); border:1px solid var(--border); padding:1.5rem; border-top:4px solid var(--primary); }
+    .side-card h3 { color:var(--primary); font-size:1.25rem; margin-bottom:1rem; }
+    .side-link { display:block; padding:.65rem 0; color:var(--muted-foreground); border-bottom:1px solid rgba(100,116,139,.25); transition:color .3s; }
+    .side-link:hover, .side-link.active { color:var(--primary); }
+    .service-cta-box { background:linear-gradient(135deg, rgba(197,164,126,.18), rgba(30,41,59,.65)); border:1px solid rgba(191,155,107,.35); padding:2rem; text-align:center; }
+    .service-cta-box p { color:var(--muted-foreground); margin:.75rem 0 1.25rem; }
+    .gold-btn { display:inline-block; background:var(--primary); color:var(--primary-foreground); padding:.85rem 1.35rem; text-transform:uppercase; letter-spacing:.15em; font-size:.75rem; font-weight:800; }
+    .subcat-grid { display:grid; grid-template-columns:1fr; gap:1rem; margin-top:1rem; }
+    @media (min-width:768px){ .subcat-grid{grid-template-columns:repeat(2,1fr);} }
+    .subcat-card { display:flex; gap:1rem; align-items:flex-start; padding:1.25rem; border:1px solid var(--border); background:rgba(17,24,39,.35); transition:all .3s; }
+    .subcat-card:hover { border-color:var(--primary); transform:translateY(-3px); }
+    .subcat-card svg { color:var(--primary); flex-shrink:0; }
+    .subcat-card h3 { font-size:1.15rem; margin-bottom:.35rem; }
+    .subcat-card p { font-size:.9rem; line-height:1.6; }
+  </style>
+</head>
+<body>
+<!-- Header -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html#home" class="logo"><div class="logo-box"><span class="logo-letter">H</span></div><div class="logo-text"><span class="logo-title">HOFFMAN LEGAL</span><span class="logo-subtitle">CRIMINAL • DUI DEFENSE</span></div></a>
+      <nav class="nav-desktop">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="index.html#practice" class="nav-link">Practice Areas <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a><div class="nav-dropdown"><a href="criminal-defense.html" class="nav-dropdown-item">Criminal Defense</a>
+<a href="dui-defense.html" class="nav-dropdown-item">DUI Defense</a>
+<a href="drug-possession-cases.html" class="nav-dropdown-item">Drug Possession Cases</a>
+<a href="theft-robbery-burglary.html" class="nav-dropdown-item">Theft, Robbery & Burglary</a>
+<a href="assault-battery.html" class="nav-dropdown-item">Assault & Battery</a>
+<a href="sexual-battery-cases.html" class="nav-dropdown-item">Sexual Battery Cases</a>
+<a href="white-collar-crimes.html" class="nav-dropdown-item">White Collar Crimes</a>
+<a href="injunctions.html" class="nav-dropdown-item">Injunctions</a>
+<a href="expunge-seal-records.html" class="nav-dropdown-item">Expunge & Seal Records</a>
+<a href="personal-injury.html" class="nav-dropdown-item">Personal Injury</a></div></li>
+          <li class="nav-item"><a href="index.html#why-us" class="nav-link">Why Us</a></li>
+          <li class="nav-item"><a href="index.html#attorney" class="nav-link">Attorney</a></li>
+          <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="tel:9544594236" class="nav-phone"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (954) 459-4236</a>
+        <a href="index.html#contact" class="nav-cta">Free Consultation</a>
+      </nav>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="menuIcon"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="closeIcon" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#home" class="mobile-nav-link">Home</a>
+    <div><button class="mobile-practice-toggle" id="mobilePracticeToggle">Practice Areas <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="mobile-practice-submenu" id="mobilePracticeSubmenu"><a href="criminal-defense.html">Criminal Defense</a>
+<a href="dui-defense.html">DUI Defense</a>
+<a href="drug-possession-cases.html">Drug Possession Cases</a>
+<a href="theft-robbery-burglary.html">Theft, Robbery & Burglary</a>
+<a href="assault-battery.html">Assault & Battery</a>
+<a href="sexual-battery-cases.html">Sexual Battery Cases</a>
+<a href="white-collar-crimes.html">White Collar Crimes</a>
+<a href="injunctions.html">Injunctions</a>
+<a href="expunge-seal-records.html">Expunge & Seal Records</a>
+<a href="personal-injury.html">Personal Injury</a></div></div>
+    <a href="index.html#why-us" class="mobile-nav-link">Why Us</a><a href="index.html#attorney" class="mobile-nav-link">Attorney</a><a href="index.html#contact" class="mobile-nav-link">Contact</a>
+    <div class="mobile-cta-container"><a href="tel:9544594236" class="mobile-phone"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (954) 459-4236</a><a href="index.html#contact" class="mobile-cta">Free Consultation</a></div>
+  </div>
+<section class="service-hero"><div class="service-hero-inner"><div class="breadcrumb"><a href="index.html">Home</a> / <a href="index.html#practice">Practice Areas</a> / Drug Possession Cases</div><div class="service-icon-large"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg></div><h1 class="service-title">Drug Possession Cases</h1><p class="service-intro">Drug Charges Often Depend on Search, Seizure, and Possession Issues.</p></div></section>
+<main class="service-wrap"><div class="service-main"><section class="content-card"><h2>Drug Possession Defense</h2><p>Possession cases may involve questions about ownership, knowledge, control, illegal searches, constructive possession, and whether law enforcement handled evidence properly.</p></section>
+<section class="content-card"><h2>Challenging the Government’s Case</h2><p>Hoffman Legal evaluates the legality of the stop, search, detention, statements, lab testing, and chain of custody to identify opportunities to suppress evidence or reduce exposure.</p></section>
+<section class="content-card"><h2>Protecting Your Future</h2><p>A drug conviction can affect employment, housing, education, and immigration-related concerns. The goal is to pursue the best available outcome while protecting your long-term future.</p></section><section class="service-cta-box"><h2>Discuss Your Case With Hoffman Legal</h2><p>Get clear guidance before you speak with prosecutors, insurers, or opposing parties.</p><a href="index.html#contact" class="gold-btn">Free Consultation</a></section></div><aside class="service-sidebar"><div class="side-card"><h3>Main Practice Areas</h3><a class="side-link " href="criminal-defense.html">Criminal Defense</a><a class="side-link " href="dui-defense.html">DUI Defense</a><a class="side-link active" href="drug-possession-cases.html">Drug Possession Cases</a><a class="side-link " href="theft-robbery-burglary.html">Theft, Robbery & Burglary</a><a class="side-link " href="assault-battery.html">Assault & Battery</a><a class="side-link " href="sexual-battery-cases.html">Sexual Battery Cases</a><a class="side-link " href="white-collar-crimes.html">White Collar Crimes</a><a class="side-link " href="injunctions.html">Injunctions</a><a class="side-link " href="expunge-seal-records.html">Expunge & Seal Records</a><a class="side-link " href="personal-injury.html">Personal Injury</a></div><div class="side-card"><h3>24/7 Consultation</h3><p style="color:var(--muted-foreground);line-height:1.7;margin-bottom:1rem;">Legal emergencies do not wait. Speak with an attorney about your next step.</p><a href="tel:9544594236" class="gold-btn">Call Now</a></div></aside></main>
+<footer class="footer"><div class="footer-inner"><div class="footer-main"><div class="footer-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></div><p class="footer-tagline">Hoffman Legal</p><p class="footer-sub">Criminal defense, personal injury, and strategic advocacy for Florida clients.</p></div><nav class="footer-nav"><a href="index.html#home">Home</a><a href="index.html#practice">Practice Areas</a><a href="index.html#why-us">Why Us</a><a href="index.html#attorney">Attorney</a><a href="index.html#contact">Contact</a></nav><div class="footer-divider"><span class="footer-divider-line"></span><span class="footer-divider-diamond"></span><span class="footer-divider-line"></span></div><div class="footer-tags"><a href="criminal-defense.html" class="footer-tag">Criminal Defense</a><a href="dui-defense.html" class="footer-tag">DUI Defense</a><a href="drug-possession-cases.html" class="footer-tag">Drug Possession Cases</a><a href="theft-robbery-burglary.html" class="footer-tag">Theft, Robbery & Burglary</a><a href="assault-battery.html" class="footer-tag">Assault & Battery</a><a href="sexual-battery-cases.html" class="footer-tag">Sexual Battery Cases</a><a href="white-collar-crimes.html" class="footer-tag">White Collar Crimes</a><a href="injunctions.html" class="footer-tag">Injunctions</a><a href="expunge-seal-records.html" class="footer-tag">Expunge & Seal Records</a><a href="personal-injury.html" class="footer-tag">Personal Injury</a></div><div class="footer-bottom"><p class="footer-copyright">© 2026 Hoffman Legal. All Rights Reserved.</p><div class="footer-links"><a href="index.html#contact">Free Consultation</a><span class="footer-links-dot"></span><a href="tel:9544594236">(954) 459-4236</a></div></div></div></footer>
+<button class="chatbot-toggle" id="chatbotToggle" aria-label="Open chat"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m14.5 12.5-5 5a2.121 2.121 0 0 1-3-3l5-5"/><path d="m16.5 10.5 2-2a4.95 4.95 0 0 0-7-7l-2 2"/><path d="m7 14 2-2"/><path d="M15 6.5 9.5 12"/><path d="m6 9-2 2"/><path d="m8 11-2 2"/></svg></button><div class="chatbot-window" id="chatbotWindow"><div class="chatbot-header"><div class="chatbot-header-left"><div class="chatbot-header-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></div><div><h3>Hoffman Legal Assistant</h3><p>General information only</p></div></div><button class="chatbot-close" id="chatbotClose" aria-label="Close chat"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div><div class="chatbot-messages" id="chatbotMessages"><div class="chat-message assistant"><div class="chat-bubble">Hello! For personalized legal advice, please schedule a consultation.</div></div></div><div class="chatbot-input"><form class="chatbot-input-form" id="chatbotForm"><input type="text" id="chatbotInput" placeholder="Type your question..." autocomplete="off"><button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m14.5 12.5-5 5a2.121 2.121 0 0 1-3-3l5-5"/><path d="m16.5 10.5 2-2a4.95 4.95 0 0 0-7-7l-2 2"/><path d="m7 14 2-2"/><path d="M15 6.5 9.5 12"/><path d="m6 9-2 2"/><path d="m8 11-2 2"/></svg></button></form><p class="chatbot-disclaimer">For legal advice, please schedule a consultation.</p></div></div><div class="toast" id="toast"></div><script>
+var header=document.getElementById('header');window.addEventListener('scroll',function(){if(window.scrollY>50){header.classList.add('scrolled')}else{header.classList.remove('scrolled')}});
+var mobileToggle=document.getElementById('mobileToggle'),mobileMenu=document.getElementById('mobileMenu'),menuIcon=document.getElementById('menuIcon'),closeIcon=document.getElementById('closeIcon');if(mobileToggle&&mobileMenu){mobileToggle.addEventListener('click',function(){var isOpen=mobileMenu.classList.toggle('open');menuIcon.style.display=isOpen?'none':'block';closeIcon.style.display=isOpen?'block':'none'});mobileMenu.querySelectorAll('.mobile-nav-link,.mobile-practice-submenu a,.mobile-cta').forEach(function(link){link.addEventListener('click',function(){mobileMenu.classList.remove('open');menuIcon.style.display='block';closeIcon.style.display='none'})})}
+var mobilePracticeToggle=document.getElementById('mobilePracticeToggle'),mobilePracticeSubmenu=document.getElementById('mobilePracticeSubmenu');if(mobilePracticeToggle&&mobilePracticeSubmenu){mobilePracticeToggle.addEventListener('click',function(){mobilePracticeToggle.classList.toggle('open');mobilePracticeSubmenu.classList.toggle('open')})}
+var chatbotToggle=document.getElementById('chatbotToggle'),chatbotWindow=document.getElementById('chatbotWindow'),chatbotClose=document.getElementById('chatbotClose'),chatbotForm=document.getElementById('chatbotForm'),chatbotInput=document.getElementById('chatbotInput'),chatbotMessages=document.getElementById('chatbotMessages');if(chatbotToggle&&chatbotWindow){chatbotToggle.addEventListener('click',function(){chatbotWindow.classList.add('open');chatbotToggle.style.display='none'});chatbotClose.addEventListener('click',function(){chatbotWindow.classList.remove('open');chatbotToggle.style.display='flex'});chatbotForm.addEventListener('submit',function(e){e.preventDefault();var message=chatbotInput.value.trim();if(!message)return;var userDiv=document.createElement('div');userDiv.className='chat-message user';userDiv.innerHTML='<div class="chat-bubble">'+message.replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})+'</div>';chatbotMessages.appendChild(userDiv);chatbotInput.value='';setTimeout(function(){var botDiv=document.createElement('div');botDiv.className='chat-message assistant';botDiv.innerHTML='<div class="chat-bubble">Thank you. For personalized legal advice, call (954) 459-4236 or request a free consultation.</div>';chatbotMessages.appendChild(botDiv);chatbotMessages.scrollTop=chatbotMessages.scrollHeight},700)})}
+</script>
+</body>
+</html>
