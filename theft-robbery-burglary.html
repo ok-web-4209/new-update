@@ -1670,6 +1670,44 @@
     .subcat-card svg { color:var(--primary); flex-shrink:0; }
     .subcat-card h3 { font-size:1.15rem; margin-bottom:.35rem; }
     .subcat-card p { font-size:.9rem; line-height:1.6; }
+  
+    /* Practice Areas → Personal Injury expandable subnav (added by inject_site_updates.py) */
+    .nav-dropdown-sub { position: relative; }
+    .nav-dropdown-sub .nav-dropdown-parent {
+      display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;
+    }
+    .nav-dropdown-sub .nav-dropdown-parent svg { width: 12px; height: 12px; opacity: 0.7; }
+    .nav-subdropdown {
+      position: absolute; top: 0; left: 100%;
+      min-width: 16rem;
+      background: var(--background);
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+      opacity: 0; visibility: hidden; transform: translateX(-6px);
+      transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
+      z-index: 60;
+    }
+    .nav-dropdown-sub:hover .nav-subdropdown,
+    .nav-dropdown-sub:focus-within .nav-subdropdown {
+      opacity: 1; visibility: visible; transform: translateX(0);
+    }
+    /* Mobile PI nested list inside the practice accordion */
+    .mobile-practice-pi { display: block; }
+    .mobile-pi-hub {
+      display: block; padding: 0.5rem 0; color: var(--muted-foreground);
+      font-weight: 600;
+    }
+    .mobile-pi-sublist {
+      display: block; padding-left: 1rem;
+      border-left: 1px solid rgba(191, 155, 107, 0.25);
+      margin: 0.25rem 0 0.5rem;
+    }
+    .mobile-pi-sublist a {
+      display: block; padding: 0.4rem 0; font-size: 0.95rem;
+      color: var(--muted-foreground);
+    }
+    .mobile-pi-sublist a:hover { color: var(--primary); }
+
   </style>
   <link rel="stylesheet" href="assets/polish.css">
   <script type="application/ld+json" data-jsonld="faq-jsonld-pass">
@@ -1720,6 +1758,13 @@
   ]
 }
   </script>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" type="image/png" sizes="32x32" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <meta property="og:image" content="https://hoffman.legal/dhh-headshot.jpg">
+  <meta property="og:image:alt" content="Attorney David Hoffman, Hoffman Legal">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://hoffman.legal/dhh-headshot.jpg">
 </head>
 <body>
 <!-- Header -->
@@ -1731,7 +1776,7 @@
           <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="index.html#practice" class="nav-link">Practice Areas <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a><div class="nav-dropdown"><a href="criminal-defense.html" class="nav-dropdown-item">Criminal Defense</a>
 <a href="dui-defense.html" class="nav-dropdown-item">DUI Defense</a>
-<a href="personal-injury.html" class="nav-dropdown-item">Personal Injury</a>
+<div class="nav-dropdown-sub"><a href="personal-injury.html" class="nav-dropdown-item nav-dropdown-parent">Personal Injury <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a><div class="nav-subdropdown"><a href="car-accidents.html" class="nav-dropdown-item">Car Accidents</a><a href="truck-accidents.html" class="nav-dropdown-item">Truck Accidents</a><a href="motorcycle-accidents.html" class="nav-dropdown-item">Motorcycle Accidents</a><a href="pedestrian-accidents.html" class="nav-dropdown-item">Pedestrian Accidents</a><a href="slip-fall-injuries.html" class="nav-dropdown-item">Slip &amp; Fall Injuries</a><a href="premises-liability.html" class="nav-dropdown-item">Premises Liability</a><a href="wrongful-death.html" class="nav-dropdown-item">Wrongful Death</a><a href="dog-bites.html" class="nav-dropdown-item">Dog Bites</a><a href="rideshare-accidents.html" class="nav-dropdown-item">Rideshare Accidents</a></div></div>
 <a href="drug-possession-cases.html" class="nav-dropdown-item">Drug Possession Cases</a>
 <a href="theft-robbery-burglary.html" class="nav-dropdown-item">Theft, Robbery & Burglary</a>
 <a href="assault-battery.html" class="nav-dropdown-item">Assault & Battery</a>
@@ -1755,7 +1800,7 @@
     <a href="index.html#home" class="mobile-nav-link">Home</a>
     <div><button class="mobile-practice-toggle" id="mobilePracticeToggle">Practice Areas <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="mobile-practice-submenu" id="mobilePracticeSubmenu"><a href="criminal-defense.html">Criminal Defense</a>
 <a href="dui-defense.html">DUI Defense</a>
-<a href="personal-injury.html">Personal Injury</a>
+<div class="mobile-practice-pi"><a href="personal-injury.html" class="mobile-pi-hub">Personal Injury</a><div class="mobile-pi-sublist"><a href="car-accidents.html">Car Accidents</a><a href="truck-accidents.html">Truck Accidents</a><a href="motorcycle-accidents.html">Motorcycle Accidents</a><a href="pedestrian-accidents.html">Pedestrian Accidents</a><a href="slip-fall-injuries.html">Slip &amp; Fall Injuries</a><a href="premises-liability.html">Premises Liability</a><a href="wrongful-death.html">Wrongful Death</a><a href="dog-bites.html">Dog Bites</a><a href="rideshare-accidents.html">Rideshare Accidents</a></div></div>
 <a href="drug-possession-cases.html">Drug Possession Cases</a>
 <a href="theft-robbery-burglary.html">Theft, Robbery & Burglary</a>
 <a href="assault-battery.html">Assault & Battery</a>
@@ -1825,5 +1870,6 @@ var chatbotToggle=document.getElementById('chatbotToggle'),chatbotWindow=documen
   </nav>
 
   <script src="assets/polish.js" defer></script>
+  <script src="assets/analytics.js" defer></script>
 </body>
 </html>
