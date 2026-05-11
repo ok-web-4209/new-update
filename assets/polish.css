@@ -123,6 +123,18 @@
   transform: translateY(0);
 }
 
+/* While the mobile menu overlay is open, slide the CTA bar back out of the
+   way so it doesn't stack on top of the menu's own Free Consultation button.
+   The menu already has a phone + consult CTA near the top, so users still
+   have a clear path while the menu is visible. */
+body.menu-open .mobile-cta-bar {
+  transform: translateY(100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-cta-bar { transition: none; }
+}
+
 .mobile-cta-bar a {
   display: flex;
   align-items: center;
