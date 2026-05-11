@@ -63,34 +63,37 @@
 
   // --------------------------------------------------------------------------
   // Sticky mobile CTA bar
-  //   Hidden until the user scrolls past the hero (or 400px on inner pages).
+  //   Always visible on mobile the moment the page loads (no scroll needed).
+  //   Auto-hides while the mobile menu overlay is open so the two don't collide
+  //   visually — the menu has its own phone + consult links further up.
   // --------------------------------------------------------------------------
   function initMobileCtaBar() {
     var bar = doc.querySelector('.mobile-cta-bar');
     if (!bar) return;
 
     body.classList.add('has-mobile-cta');
+    // Show immediately; CSS media query keeps it desktop-hidden.
+    bar.classList.add('is-visible');
 
-    // Trigger sits a bit below hero on the homepage, or 400px in on inner pages.
-    var triggerY = 400;
-    var hero = doc.querySelector('.hero');
-    if (hero) {
-      triggerY = Math.max(300, hero.offsetHeight - 120);
-    }
+    // Watch the mobile menu for open/close so we can slide the bar out of the
+    // way while it's open. Works on every page because they all use the same
+    // `#mobileMenu` element and `.open` class.
+    var menu = doc.getElementById('mobileMenu');
+    if (!menu) return;
 
-    function toggle() {
-      if ((window.pageYOffset || root.scrollTop) > triggerY) {
-        bar.classList.add('is-visible');
+    function syncMenuState() {
+      if (menu.classList.contains('open')) {
+        body.classList.add('menu-open');
       } else {
-        bar.classList.remove('is-visible');
+        body.classList.remove('menu-open');
       }
     }
-    window.addEventListener('scroll', toggle, { passive: true });
-    window.addEventListener('resize', function () {
-      if (hero) triggerY = Math.max(300, hero.offsetHeight - 120);
-      toggle();
-    });
-    toggle();
+
+    if ('MutationObserver' in window) {
+      var mo = new MutationObserver(syncMenuState);
+      mo.observe(menu, { attributes: true, attributeFilter: ['class'] });
+    }
+    syncMenuState();
   }
 
   // --------------------------------------------------------------------------
