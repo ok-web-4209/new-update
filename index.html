@@ -1041,7 +1041,8 @@
     }
 
     .form-input,
-    .form-textarea {
+    .form-textarea,
+    .form-select {
       width: 100%;
       padding: 0.75rem 1rem;
       background: rgba(17, 24, 39, 0.5);
@@ -1058,7 +1059,8 @@
     }
 
     .form-input:focus,
-    .form-textarea:focus {
+    .form-textarea:focus,
+    .form-select:focus {
       outline: none;
       border-color: var(--primary);
     }
@@ -1070,6 +1072,46 @@
     .form-textarea {
       resize: none;
       min-height: 120px;
+    }
+
+    .form-select {
+      height: 48px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      padding-right: 2.5rem;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23C5A47E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m6 9 6 6 6-6'/></svg>");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      cursor: pointer;
+    }
+
+    .form-select option {
+      background: var(--background);
+      color: var(--foreground);
+    }
+
+    /* Honeypot — must look like any other field to bots, invisible to humans */
+    .form-hp {
+      position: absolute;
+      left: -10000px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    .form-disclaimer {
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      line-height: 1.6;
+      color: var(--muted-foreground);
+      text-align: center;
+    }
+
+    .form-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
     }
 
     .form-btn {
@@ -1846,20 +1888,45 @@
         </div>
       </div>
       <div class="contact-form">
-        <form id="contactForm">
+        <form id="contactForm" action="https://formspree.io/f/mpqbkjdq" method="POST" novalidate>
           <div class="form-group">
-            <input type="text" class="form-input" placeholder="Full Name" required>
+            <input type="text" name="name" class="form-input" placeholder="Full Name" required>
           </div>
           <div class="form-group">
-            <input type="email" class="form-input" placeholder="Email Address" required>
+            <input type="email" name="email" class="form-input" placeholder="Email Address" required>
           </div>
           <div class="form-group">
-            <input type="tel" class="form-input" placeholder="Phone Number">
+            <input type="tel" name="phone" class="form-input" placeholder="Phone Number">
           </div>
           <div class="form-group">
-            <textarea class="form-textarea" placeholder="Briefly describe your case..." rows="5"></textarea>
+            <select name="practice_area" class="form-select" required>
+              <option value="" disabled selected>Select a Practice Area</option>
+              <option value="Criminal Defense">Criminal Defense</option>
+              <option value="DUI Defense">DUI Defense</option>
+              <option value="Personal Injury">Personal Injury</option>
+              <option value="Drug Possession Cases">Drug Possession Cases</option>
+              <option value="Theft, Robbery &amp; Burglary">Theft, Robbery &amp; Burglary</option>
+              <option value="Assault &amp; Battery">Assault &amp; Battery</option>
+              <option value="Sexual Battery Cases">Sexual Battery Cases</option>
+              <option value="White Collar Crimes">White Collar Crimes</option>
+              <option value="Injunctions">Injunctions</option>
+              <option value="Expunge &amp; Seal Records">Expunge &amp; Seal Records</option>
+              <option value="Early Termination of Probation">Early Termination of Probation</option>
+              <option value="Estate Planning">Estate Planning</option>
+              <option value="Other / Not sure">Other / Not sure</option>
+            </select>
           </div>
+          <div class="form-group">
+            <textarea name="message" class="form-textarea" placeholder="Briefly describe your case..." rows="5" required></textarea>
+          </div>
+          <!-- Honeypot anti-spam: hidden from users, bots fill it and get blocked -->
+          <div class="form-hp" aria-hidden="true">
+            <label>Leave this field empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+          </div>
+          <!-- Subject line of the email that lands in the inbox -->
+          <input type="hidden" name="_subject" value="New consultation request from hoffman.legal">
           <button type="submit" class="form-btn">Send Message</button>
+          <p class="form-disclaimer">Submitting this form does not create an attorney-client relationship. Please do not share confidential information until representation is confirmed.</p>
         </form>
       </div>
     </div>
@@ -2024,21 +2091,55 @@
     // ========== Contact Form ==========
     var contactForm = document.getElementById('contactForm');
     var toast = document.getElementById('toast');
+    var toastTimer;
+
+    function showToast(message, durationMs) {
+      toast.textContent = message;
+      toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function() {
+        toast.classList.remove('show');
+      }, durationMs || 4000);
+    }
 
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
-      
-      // Show toast
-      toast.textContent = 'Message Sent! We will contact you shortly.';
-      toast.classList.add('show');
-      
-      // Reset form
-      contactForm.reset();
-      
-      // Hide toast after 3 seconds
-      setTimeout(function() {
-        toast.classList.remove('show');
-      }, 3000);
+
+      var submitBtn = contactForm.querySelector('.form-btn');
+      var originalBtnText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      var formData = new FormData(contactForm);
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      })
+        .then(function(response) {
+          if (response.ok) {
+            showToast('Message Sent! We will contact you shortly.');
+            contactForm.reset();
+          } else {
+            return response.json().then(function(data) {
+              var msg = 'Sorry, the form could not be submitted. Please call (954) 459-4236.';
+              if (data && Array.isArray(data.errors) && data.errors.length) {
+                msg = data.errors.map(function(err) { return err.message; }).join(', ');
+              }
+              showToast(msg, 6000);
+            }).catch(function() {
+              showToast('Sorry, the form could not be submitted. Please call (954) 459-4236.', 6000);
+            });
+          }
+        })
+        .catch(function() {
+          showToast('Network error. Please call (954) 459-4236 or try again shortly.', 6000);
+        })
+        .then(function() {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalBtnText;
+        });
     });
 
     // ========== Chatbot ==========
