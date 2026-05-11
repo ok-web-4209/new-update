@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Hoffman Legal</title>
+  <meta name="description" content="Privacy Policy for Hoffman Legal. How we collect, use, and protect information submitted through hoffman.legal.">
+  <meta name="robots" content="index,follow">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --background: hsl(222, 47%, 11%);
+      --foreground: hsl(210, 40%, 98%);
+      --primary: hsl(40, 52%, 55%);
+      --primary-foreground: hsl(222, 47%, 11%);
+      --secondary: hsl(217, 33%, 17%);
+      --muted-foreground: hsl(215, 20%, 65%);
+      --border: hsl(217, 33%, 22%);
+      --rose-gold: #C5A47E;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-sans);
+      background: var(--background);
+      color: var(--foreground);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a { color: var(--primary); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--foreground); }
+
+    /* Header */
+    .legal-header {
+      background: rgba(17, 24, 39, 0.95);
+      border-bottom: 1px solid rgba(191, 155, 107, 0.2);
+      padding: 1.5rem 2rem;
+    }
+    .legal-header-inner {
+      max-width: 1152px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .logo { display: flex; align-items: center; gap: 0.625rem; }
+    .logo-box {
+      width: 40px;
+      height: 40px;
+      border: 1.5px solid var(--rose-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo-letter {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      color: var(--rose-gold);
+    }
+    .logo-title {
+      font-size: 0.8rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--rose-gold);
+    }
+    .back-link {
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    /* Hero */
+    .legal-hero {
+      padding: 4rem 2rem 2rem;
+      text-align: center;
+      border-bottom: 1px solid rgba(191, 155, 107, 0.15);
+    }
+    .legal-hero p.kicker {
+      color: var(--primary);
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+    }
+    .legal-hero h1 {
+      font-family: var(--font-serif);
+      font-size: 2.25rem;
+      margin-bottom: 1rem;
+    }
+    @media (min-width: 768px) {
+      .legal-hero h1 { font-size: 3rem; }
+    }
+    .legal-hero .meta {
+      color: var(--muted-foreground);
+      font-size: 0.875rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .legal-hero .divider {
+      width: 5rem;
+      height: 2px;
+      background: var(--primary);
+      margin: 1.5rem auto;
+    }
+
+    /* Draft notice */
+    .draft-notice {
+      max-width: 880px;
+      margin: 2rem auto 0;
+      padding: 1.25rem 1.5rem;
+      background: rgba(191, 155, 107, 0.08);
+      border-left: 3px solid var(--primary);
+      color: rgba(248, 250, 252, 0.88);
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+
+    /* Content */
+    .legal-main {
+      flex: 1;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+    @media (min-width: 768px) {
+      .legal-main { padding: 4rem 2rem 6rem; }
+    }
+    .legal-main h2 {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .legal-main h2:first-child { margin-top: 0; }
+    .legal-main h3 {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      color: var(--foreground);
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .legal-main p,
+    .legal-main li {
+      color: rgba(248, 250, 252, 0.88);
+      margin-bottom: 1rem;
+    }
+    .legal-main ul {
+      padding-left: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .legal-main li {
+      margin-bottom: 0.5rem;
+    }
+    .legal-main strong { color: var(--foreground); }
+
+    /* Footer */
+    .legal-footer {
+      background: hsl(222, 47%, 6%);
+      border-top: 1px solid rgba(191, 155, 107, 0.3);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      color: rgba(148, 163, 184, 0.6);
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+    }
+    .legal-footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.75rem;
+    }
+    .legal-footer-links a {
+      color: rgba(148, 163, 184, 0.8);
+    }
+    .legal-footer-links a:hover { color: var(--primary); }
+  </style>
+  <link rel="stylesheet" href="assets/polish.css">
+</head>
+
+<body>
+  <header class="legal-header">
+    <div class="legal-header-inner">
+      <a class="logo" href="index.html">
+        <div class="logo-box"><span class="logo-letter">H</span></div>
+        <span class="logo-title">Hoffman Legal</span>
+      </a>
+      <a class="back-link" href="index.html">&larr; Back to Home</a>
+    </div>
+  </header>
+
+  <section class="legal-hero">
+    <p class="kicker">Hoffman Legal</p>
+    <h1>Privacy Policy</h1>
+    <div class="divider"></div>
+    <p class="meta">Last Updated: November 1, 2025</p>
+    <div class="draft-notice">
+      <strong>Please review before publishing.</strong> This privacy policy is a working draft written to reflect the
+      site's current functionality (Formspree contact form, Google Analytics, embedded Google Maps, and a basic
+      informational chatbot). Hoffman Legal should review and customize the language before relying on it publicly.
+    </div>
+  </section>
+
+  <main class="legal-main">
+    <h2>1. About This Policy</h2>
+    <p>
+      This Privacy Policy describes how Hoffman Legal (&ldquo;Hoffman Legal,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) collects,
+      uses, and protects information when you visit <a href="https://hoffman.legal/">hoffman.legal</a> (the &ldquo;Site&rdquo;) or
+      submit a consultation request. It applies to information collected through the Site and does not describe the
+      handling of information provided in the course of an established attorney-client relationship, which is governed
+      separately by applicable rules of professional conduct and any engagement agreement.
+    </p>
+
+    <h2>2. Information We Collect</h2>
+
+    <h3>Information you provide directly</h3>
+    <p>
+      When you submit our contact or consultation form we collect the information you choose to include — typically
+      your name, email address, phone number, the practice area relevant to your inquiry, and a description of your
+      situation.
+    </p>
+
+    <h3>Information collected automatically</h3>
+    <p>
+      Like most websites, we collect standard technical information automatically, including your IP address, browser
+      type and version, device type, referring URL, pages viewed, time spent on pages, and general location inferred
+      from your IP address. We use Google Analytics (measurement ID G-50SJMTCXDQ) to help us understand how visitors
+      use the Site.
+    </p>
+
+    <h3>Third-party embeds</h3>
+    <p>
+      The Site embeds Google Maps to display our office location. When you interact with the map, Google may collect
+      information according to its own privacy practices.
+    </p>
+
+    <h2>3. How We Use Information</h2>
+    <ul>
+      <li>To respond to your consultation request and provide the information you've requested.</li>
+      <li>To evaluate whether we can assist with your matter, and to schedule a consultation.</li>
+      <li>To maintain, improve, and secure the Site.</li>
+      <li>To comply with legal obligations and to protect our legal rights.</li>
+    </ul>
+
+    <h2>4. Attorney-Client Relationship</h2>
+    <p>
+      <strong>Submitting the contact form does not create an attorney-client relationship.</strong> An attorney-client
+      relationship with Hoffman Legal is formed only after (a) we have reviewed your potential matter for conflicts,
+      (b) we have expressly agreed in writing to represent you, and (c) you have signed an engagement agreement.
+      Please do not send confidential or time-sensitive information through the form until representation is confirmed.
+    </p>
+
+    <h2>5. How We Share Information</h2>
+    <p>We do not sell your personal information. We share information only in the following limited circumstances:</p>
+    <ul>
+      <li>
+        <strong>Service providers.</strong> Vendors that help us operate the Site and process inquiries — including
+        our web host, email and form-submission provider (Formspree), and analytics provider (Google).
+      </li>
+      <li>
+        <strong>Legal requirements.</strong> When required by law, subpoena, court order, or to protect our rights,
+        safety, or property.
+      </li>
+      <li>
+        <strong>Business transfers.</strong> In connection with a merger, acquisition, or sale of all or a portion of
+        our practice, subject to confidentiality protections.
+      </li>
+    </ul>
+
+    <h2>6. Cookies &amp; Tracking Technologies</h2>
+    <p>
+      The Site uses cookies and similar technologies for Google Analytics and basic functionality. Most browsers allow
+      you to refuse or delete cookies through their settings. Disabling cookies may affect certain Site features.
+    </p>
+
+    <h2>7. Data Retention</h2>
+    <p>
+      We retain inquiry information for as long as necessary to respond to your request and for reasonable
+      record-keeping and conflict-check purposes, unless a longer retention period is required by law or applicable
+      rules of professional conduct.
+    </p>
+
+    <h2>8. Security</h2>
+    <p>
+      We take reasonable administrative, technical, and physical measures to protect information submitted through
+      the Site. However, no method of transmission or storage is completely secure, and we cannot guarantee absolute
+      security. Please do not send highly sensitive information (financial account numbers, SSNs, medical records)
+      through the website; instead, contact us by phone to arrange a secure method.
+    </p>
+
+    <h2>9. Children's Privacy</h2>
+    <p>
+      The Site is not directed to children under 13, and we do not knowingly collect personal information from
+      children under 13. If you believe a child has provided information through the Site, please contact us so we can
+      delete it.
+    </p>
+
+    <h2>10. Your Choices</h2>
+    <p>
+      You may request access to, correction of, or deletion of information you have submitted through the Site by
+      emailing us at <a href="mailto:david@hoffman.legal">david@hoffman.legal</a>. We will respond consistent with
+      applicable law. Requests that conflict with our legal or professional obligations (for example, retention
+      required under rules of professional conduct) may not be able to be fulfilled in full.
+    </p>
+
+    <h2>11. Third-Party Links</h2>
+    <p>
+      The Site may link to third-party websites we do not control. This Policy does not apply to those websites;
+      review their privacy policies before submitting information.
+    </p>
+
+    <h2>12. Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. Updates will be reflected by a revised &ldquo;Last Updated&rdquo;
+      date at the top of this page. Material changes will be communicated on the Site.
+    </p>
+
+    <h2>13. Contact</h2>
+    <p>
+      Questions about this Privacy Policy can be directed to:
+    </p>
+    <p>
+      <strong>Hoffman Legal</strong><br>
+      101 SW 1st Street, Suite CW12<br>
+      Dania Beach, FL 33004<br>
+      Phone: <a href="tel:9544594236">(954) 459-4236</a><br>
+      Email: <a href="mailto:david@hoffman.legal">david@hoffman.legal</a>
+    </p>
+  </main>
+
+  <footer class="legal-footer">
+    <div class="legal-footer-links">
+      <a href="index.html">Home</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <p>&copy; 2026 Hoffman Legal. All Rights Reserved.</p>
+  </footer>
+
+  <div class="read-progress" aria-hidden="true"></div>
+  <button class="back-to-top" type="button" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+  <script src="assets/polish.js" defer></script>
+</body>
+</html>

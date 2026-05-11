@@ -1,0 +1,4 @@
+# Python bytecode from build scripts
+__pycache__/
+*.pyc
+*.pyo
