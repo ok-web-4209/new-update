@@ -1684,6 +1684,253 @@
         transform: translateX(-50%) translateY(0);
       }
     }
+
+    /* ========== Reviews ========== */
+    .reviews-section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .reviews-summary {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .reviews-rating {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .reviews-rating-number {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--primary);
+      line-height: 1;
+    }
+
+    .reviews-stars {
+      display: flex;
+      gap: 2px;
+    }
+
+    .reviews-stars svg {
+      width: 22px;
+      height: 22px;
+      color: var(--primary);
+      fill: var(--primary);
+    }
+
+    @media (min-width: 768px) {
+      .reviews-stars svg {
+        width: 26px;
+        height: 26px;
+      }
+    }
+
+    .reviews-source {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--muted-foreground);
+      font-size: 0.875rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .reviews-source-g {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 1rem;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .reviews-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: 1px solid rgba(191, 155, 107, 0.5);
+      color: var(--primary);
+      padding: 0.65rem 1.25rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      transition: all 0.3s;
+    }
+
+    .reviews-cta:hover {
+      background: var(--primary);
+      color: var(--primary-foreground);
+      border-color: var(--primary);
+    }
+
+    .reviews-cta svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 640px) {
+      .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .reviews-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.75rem;
+      }
+    }
+
+    .review-card {
+      position: relative;
+      background: rgba(17, 24, 39, 0.4);
+      border: 1px solid var(--border);
+      padding: 2rem 1.5rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    .review-card::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 3px;
+      background: linear-gradient(to right,
+        transparent,
+        rgba(191, 155, 107, 0.7),
+        transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .review-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(191, 155, 107, 0.5);
+      background: rgba(17, 24, 39, 0.55);
+    }
+
+    .review-card:hover::before {
+      opacity: 1;
+    }
+
+    /* Oversized serif quote mark in the corner */
+    .review-quote-mark {
+      position: absolute;
+      top: -0.5rem;
+      right: 0.75rem;
+      font-family: var(--font-serif);
+      font-size: 5rem;
+      line-height: 1;
+      color: rgba(191, 155, 107, 0.15);
+      font-style: italic;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .review-stars {
+      display: flex;
+      gap: 2px;
+      margin-bottom: 1rem;
+    }
+
+    .review-stars svg {
+      width: 16px;
+      height: 16px;
+      color: var(--primary);
+      fill: var(--primary);
+    }
+
+    .review-text {
+      color: rgba(248, 250, 252, 0.88);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      font-family: var(--font-serif);
+      font-style: italic;
+      margin-bottom: 1.5rem;
+      flex: 1;
+    }
+
+    .review-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(100, 116, 139, 0.2);
+    }
+
+    .review-avatar {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg,
+        rgba(191, 155, 107, 0.25),
+        rgba(30, 41, 59, 0.8));
+      border: 1px solid rgba(191, 155, 107, 0.3);
+      color: var(--primary);
+      font-family: var(--font-serif);
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .review-reviewer {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .review-name {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--foreground);
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .review-local-guide {
+      display: inline-block;
+      margin-left: 0.4rem;
+      font-size: 0.6rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      vertical-align: 2px;
+    }
+
+    .review-date {
+      font-size: 0.7rem;
+      color: var(--muted-foreground);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
   </style>
 </head>
 
@@ -1709,6 +1956,7 @@
 <a href="early-termination-of-probation.html" class="nav-dropdown-item">Early Termination of Probation</a>
 <a href="estate-planning.html" class="nav-dropdown-item">Estate Planning</a></div></li>
           <li class="nav-item"><a href="#why-us" class="nav-link">Why Us</a></li>
+          <li class="nav-item"><a href="#reviews" class="nav-link">Reviews</a></li>
           <li class="nav-item"><a href="#attorney" class="nav-link">Attorney</a></li>
           <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
@@ -1732,7 +1980,7 @@
 <a href="expunge-seal-records.html">Expunge & Seal Records</a>
 <a href="early-termination-of-probation.html">Early Termination of Probation</a>
 <a href="estate-planning.html">Estate Planning</a></div></div>
-    <a href="#why-us" class="mobile-nav-link">Why Us</a><a href="#attorney" class="mobile-nav-link">Attorney</a><a href="#contact" class="mobile-nav-link">Contact</a>
+    <a href="#why-us" class="mobile-nav-link">Why Us</a><a href="#reviews" class="mobile-nav-link">Reviews</a><a href="#attorney" class="mobile-nav-link">Attorney</a><a href="#contact" class="mobile-nav-link">Contact</a>
     <div class="mobile-cta-container"><a href="tel:9544594236" class="mobile-phone"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (954) 459-4236</a><a href="#contact" class="mobile-cta">Free Consultation</a></div>
   </div>
 
@@ -1847,6 +2095,37 @@
         <h3 class="why-title">Strategic Insight</h3>
         <p class="why-desc">With resounding experience, knowledge and expertise, we anticipate prosecution tactics and build proactive defense strategies to secure dismissals.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section reviews-section" id="reviews">
+    <div class="section-header">
+      <p class="section-subtitle">What Clients Are Saying</p>
+      <h2 class="section-title">Client Reviews</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="reviews-summary">
+      <div class="reviews-rating">
+        <span class="reviews-rating-number">5.0</span>
+        <div class="reviews-stars" aria-label="5 out of 5 stars">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+      </div>
+      <p class="reviews-source">Verified on <span class="reviews-source-g">Google Reviews</span></p>
+      <a href="https://share.google/URxhHzEifHlYHNhUF" target="_blank" rel="noopener" class="reviews-cta">
+        See All Reviews
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+      </a>
+    </div>
+
+    <div class="reviews-grid" id="reviewsGrid">
+      <!-- Review cards are rendered by JS so we can shuffle to 4 of 6 on each load. -->
     </div>
   </section>
 
@@ -1979,6 +2258,7 @@
         <a href="#home">Home</a>
         <a href="#practice">Practice Areas</a>
         <a href="#why-us">Why Us</a>
+        <a href="#reviews">Reviews</a>
         <a href="#attorney">Attorney</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -2206,6 +2486,103 @@
       div.textContent = text;
       return div.innerHTML;
     }
+
+    // ========== Reviews (shuffle 4 of 6 on each page load) ==========
+    // All six reviews from the Google Business Profile, kept verbatim.
+    var reviews = [
+      {
+        name: 'Jonah Suissa',
+        initials: 'JS',
+        localGuide: true,
+        date: '3 weeks ago',
+        text: "I have nothing but good things to say about Hoffman Legal. David is a standout attorney and is always available to answer questions. He is organized, professional, and extremely knowledgeable. I would recommend Hoffman Legal to anyone looking for an attorney that truly cares about their clients."
+      },
+      {
+        name: 'Pompano Randy',
+        initials: 'PR',
+        localGuide: false,
+        date: '3 weeks ago',
+        text: "Hoffman great service really appreciated him showing up and getting job done for me."
+      },
+      {
+        name: 'Joseph Roman',
+        initials: 'JR',
+        localGuide: false,
+        date: 'a month ago',
+        text: "Dedicated punctual and understanding of the clients needs Hoffman legal is without the doubt the best law firm in South Florida!"
+      },
+      {
+        name: 'Thomas Mahesh',
+        initials: 'TM',
+        localGuide: false,
+        date: 'a month ago',
+        text: "Excellent service. David is coperative and passionate about his work. He is always responsive and ready to assist whenever needed"
+      },
+      {
+        name: 'Milan Ben Yair',
+        initials: 'MB',
+        localGuide: false,
+        date: 'a month ago',
+        text: "I needed some contracts reviewed and they were handled quickly and professionally. Great communication and super easy to work with. 5 stars for sure."
+      },
+      {
+        name: 'MaryEllen Closius',
+        initials: 'MC',
+        localGuide: true,
+        date: 'a month ago',
+        text: "I\u2019ve known David for many years. He is a dedicated, ethical and very talented legal professional who truly has his client\u2019s best interest in the forefront. Cannot recommend him enough!"
+      }
+    ];
+
+    // Fisher-Yates shuffle, picks the first 4 after shuffling so every load
+    // shows a fresh mix while keeping the source list unchanged.
+    function pickReviews(list, count) {
+      var copy = list.slice();
+      for (var i = copy.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = copy[i];
+        copy[i] = copy[j];
+        copy[j] = tmp;
+      }
+      return copy.slice(0, count);
+    }
+
+    function escapeReviewHtml(text) {
+      var div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    function renderReviews() {
+      var grid = document.getElementById('reviewsGrid');
+      if (!grid) return;
+      var starSvg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+      var stars = '<div class="review-stars" aria-label="5 out of 5 stars">' + starSvg + starSvg + starSvg + starSvg + starSvg + '</div>';
+      var chosen = pickReviews(reviews, 4);
+      var html = '';
+      for (var i = 0; i < chosen.length; i++) {
+        var r = chosen[i];
+        var badge = r.localGuide
+          ? '<span class="review-local-guide" aria-label="Google Local Guide">Local Guide</span>'
+          : '';
+        html +=
+          '<article class="review-card">' +
+            '<span class="review-quote-mark" aria-hidden="true">\u201C</span>' +
+            stars +
+            '<p class="review-text">\u201C' + escapeReviewHtml(r.text) + '\u201D</p>' +
+            '<div class="review-meta">' +
+              '<div class="review-avatar" aria-hidden="true">' + escapeReviewHtml(r.initials) + '</div>' +
+              '<div class="review-reviewer">' +
+                '<span class="review-name">' + escapeReviewHtml(r.name) + badge + '</span>' +
+                '<span class="review-date">' + escapeReviewHtml(r.date) + '</span>' +
+              '</div>' +
+            '</div>' +
+          '</article>';
+      }
+      grid.innerHTML = html;
+    }
+
+    renderReviews();
 
     // ========== Smooth Scroll for older browsers ==========
     document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
