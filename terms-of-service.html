@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service | Hoffman Legal</title>
+  <meta name="description" content="Terms of Service for Hoffman Legal. Rules for using hoffman.legal, disclaimers, and limitations.">
+  <meta name="robots" content="index,follow">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --background: hsl(222, 47%, 11%);
+      --foreground: hsl(210, 40%, 98%);
+      --primary: hsl(40, 52%, 55%);
+      --primary-foreground: hsl(222, 47%, 11%);
+      --secondary: hsl(217, 33%, 17%);
+      --muted-foreground: hsl(215, 20%, 65%);
+      --border: hsl(217, 33%, 22%);
+      --rose-gold: #C5A47E;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-sans);
+      background: var(--background);
+      color: var(--foreground);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a { color: var(--primary); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--foreground); }
+
+    .legal-header {
+      background: rgba(17, 24, 39, 0.95);
+      border-bottom: 1px solid rgba(191, 155, 107, 0.2);
+      padding: 1.5rem 2rem;
+    }
+    .legal-header-inner {
+      max-width: 1152px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .logo { display: flex; align-items: center; gap: 0.625rem; }
+    .logo-box {
+      width: 40px;
+      height: 40px;
+      border: 1.5px solid var(--rose-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo-letter {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      color: var(--rose-gold);
+    }
+    .logo-title {
+      font-size: 0.8rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--rose-gold);
+    }
+    .back-link {
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .legal-hero {
+      padding: 4rem 2rem 2rem;
+      text-align: center;
+      border-bottom: 1px solid rgba(191, 155, 107, 0.15);
+    }
+    .legal-hero p.kicker {
+      color: var(--primary);
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+    }
+    .legal-hero h1 {
+      font-family: var(--font-serif);
+      font-size: 2.25rem;
+      margin-bottom: 1rem;
+    }
+    @media (min-width: 768px) {
+      .legal-hero h1 { font-size: 3rem; }
+    }
+    .legal-hero .meta {
+      color: var(--muted-foreground);
+      font-size: 0.875rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .legal-hero .divider {
+      width: 5rem;
+      height: 2px;
+      background: var(--primary);
+      margin: 1.5rem auto;
+    }
+
+    .draft-notice {
+      max-width: 880px;
+      margin: 2rem auto 0;
+      padding: 1.25rem 1.5rem;
+      background: rgba(191, 155, 107, 0.08);
+      border-left: 3px solid var(--primary);
+      color: rgba(248, 250, 252, 0.88);
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+
+    .legal-main {
+      flex: 1;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+    @media (min-width: 768px) {
+      .legal-main { padding: 4rem 2rem 6rem; }
+    }
+    .legal-main h2 {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .legal-main h2:first-child { margin-top: 0; }
+    .legal-main h3 {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      color: var(--foreground);
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .legal-main p,
+    .legal-main li {
+      color: rgba(248, 250, 252, 0.88);
+      margin-bottom: 1rem;
+    }
+    .legal-main ul {
+      padding-left: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .legal-main li { margin-bottom: 0.5rem; }
+    .legal-main strong { color: var(--foreground); }
+
+    .legal-footer {
+      background: hsl(222, 47%, 6%);
+      border-top: 1px solid rgba(191, 155, 107, 0.3);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      color: rgba(148, 163, 184, 0.6);
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+    }
+    .legal-footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.75rem;
+    }
+    .legal-footer-links a { color: rgba(148, 163, 184, 0.8); }
+    .legal-footer-links a:hover { color: var(--primary); }
+  </style>
+  <link rel="stylesheet" href="assets/polish.css">
+</head>
+
+<body>
+  <header class="legal-header">
+    <div class="legal-header-inner">
+      <a class="logo" href="index.html">
+        <div class="logo-box"><span class="logo-letter">H</span></div>
+        <span class="logo-title">Hoffman Legal</span>
+      </a>
+      <a class="back-link" href="index.html">&larr; Back to Home</a>
+    </div>
+  </header>
+
+  <section class="legal-hero">
+    <p class="kicker">Hoffman Legal</p>
+    <h1>Terms of Service</h1>
+    <div class="divider"></div>
+    <p class="meta">Last Updated: November 1, 2025</p>
+    <div class="draft-notice">
+      <strong>Please review before publishing.</strong> These Terms of Service are a working draft based on standard
+      law-firm website terms. Hoffman Legal should review and customize the language — particularly the governing-law,
+      disclaimers, and limitation-of-liability sections — before relying on it publicly.
+    </div>
+  </section>
+
+  <main class="legal-main">
+    <h2>1. Acceptance of Terms</h2>
+    <p>
+      These Terms of Service (&ldquo;Terms&rdquo;) govern your access to and use of <a href="https://hoffman.legal/">hoffman.legal</a>
+      (the &ldquo;Site&rdquo;), operated by Hoffman Legal (&ldquo;Hoffman Legal,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;). By using the Site, you
+      agree to these Terms. If you do not agree, do not use the Site.
+    </p>
+
+    <h2>2. No Legal Advice</h2>
+    <p>
+      <strong>The content on this Site is for general informational purposes only and is not legal advice.</strong>
+      Reading this Site or contacting Hoffman Legal through the Site does not create an attorney-client relationship.
+      Laws change and vary by jurisdiction, and the application of law depends on the specific facts of each situation.
+      You should not act on information from this Site without obtaining advice from a qualified attorney licensed in
+      your jurisdiction.
+    </p>
+
+    <h2>3. No Attorney-Client Relationship</h2>
+    <p>
+      An attorney-client relationship with Hoffman Legal is formed only when (a) we have completed a conflict check,
+      (b) we have expressly agreed in writing to represent you, and (c) you have signed an engagement agreement.
+      Until all three occur, information you send through the Site will not be treated as confidential for purposes
+      of establishing an attorney-client relationship. Please do not send confidential or sensitive information
+      through the contact form.
+    </p>
+
+    <h2>4. Advertising Disclaimer</h2>
+    <p>
+      Portions of this Site may be considered attorney advertising under the rules of the Supreme Court of Florida.
+      The hiring of a lawyer is an important decision that should not be based solely on advertisements. Before you
+      decide, ask us to send you free written information about our qualifications and experience. Prior results do
+      not guarantee or predict a similar outcome in any future case.
+    </p>
+
+    <h2>5. Jurisdiction of Practice</h2>
+    <p>
+      David Hoffman is licensed to practice in the State of Florida. The Site is directed primarily to residents of
+      Florida. We are not offering to represent, and will not represent, anyone in a jurisdiction where we are not
+      licensed or otherwise authorized to practice.
+    </p>
+
+    <h2>6. Use of the Site</h2>
+    <p>You agree to use the Site only for lawful purposes and in a manner consistent with these Terms. You agree not to:</p>
+    <ul>
+      <li>Use the Site in a way that could disable, overburden, damage, or impair it.</li>
+      <li>Use any automated means (robots, scrapers, etc.) to access the Site without our prior written permission.</li>
+      <li>Attempt to gain unauthorized access to any portion of the Site or any server or database connected to it.</li>
+      <li>Interfere with other users' use of the Site.</li>
+      <li>Use the Site to transmit malicious code, unlawful content, or spam.</li>
+    </ul>
+
+    <h2>7. Intellectual Property</h2>
+    <p>
+      All content on the Site — including text, graphics, logos, images, and code — is owned by Hoffman Legal or its
+      licensors and is protected by U.S. and international copyright, trademark, and other laws. You may view and
+      print pages for personal, non-commercial use, but may not otherwise copy, modify, distribute, or create
+      derivative works without our written permission.
+    </p>
+
+    <h2>8. Third-Party Links &amp; Services</h2>
+    <p>
+      The Site may contain links to third-party websites and may embed third-party services (such as Google Maps
+      or analytics). Those sites and services are not under our control; we are not responsible for their content,
+      privacy practices, or availability.
+    </p>
+
+    <h2>9. Disclaimers</h2>
+    <p>
+      The Site and its content are provided &ldquo;AS IS&rdquo; and &ldquo;AS AVAILABLE,&rdquo; without warranties of any kind,
+      whether express or implied, including implied warranties of merchantability, fitness for a particular purpose,
+      non-infringement, or accuracy. We do not warrant that the Site will be uninterrupted, error-free, or free of
+      viruses or other harmful components.
+    </p>
+
+    <h2>10. Limitation of Liability</h2>
+    <p>
+      To the fullest extent permitted by law, Hoffman Legal will not be liable for any indirect, incidental, special,
+      consequential, or punitive damages, or any loss of profits, data, or goodwill, arising from or related to your
+      use of the Site. Our total liability for any claim arising from the Site is limited to one hundred U.S. dollars
+      (US$100). Some jurisdictions do not allow these limitations; in those jurisdictions, the limitations apply to
+      the maximum extent permitted by law.
+    </p>
+
+    <h2>11. Indemnification</h2>
+    <p>
+      You agree to indemnify and hold harmless Hoffman Legal and its attorneys, employees, and agents from any
+      claims, losses, damages, liabilities, and expenses (including reasonable attorneys' fees) arising out of your
+      use of the Site or your violation of these Terms.
+    </p>
+
+    <h2>12. Governing Law &amp; Venue</h2>
+    <p>
+      These Terms are governed by the laws of the State of Florida, without regard to conflict-of-laws principles.
+      Any dispute arising out of or relating to these Terms or the Site will be brought exclusively in the state or
+      federal courts located in Broward County, Florida, and you consent to the jurisdiction and venue of those courts.
+    </p>
+
+    <h2>13. Changes to the Terms</h2>
+    <p>
+      We may update these Terms from time to time. Updates will be reflected by a revised &ldquo;Last Updated&rdquo; date at
+      the top of this page. Your continued use of the Site after changes take effect constitutes acceptance of the
+      updated Terms.
+    </p>
+
+    <h2>14. Contact</h2>
+    <p>
+      <strong>Hoffman Legal</strong><br>
+      101 SW 1st Street, Suite CW12<br>
+      Dania Beach, FL 33004<br>
+      Phone: <a href="tel:9544594236">(954) 459-4236</a><br>
+      Email: <a href="mailto:david@hoffman.legal">david@hoffman.legal</a>
+    </p>
+  </main>
+
+  <footer class="legal-footer">
+    <div class="legal-footer-links">
+      <a href="index.html">Home</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <p>&copy; 2026 Hoffman Legal. All Rights Reserved.</p>
+  </footer>
+
+  <div class="read-progress" aria-hidden="true"></div>
+  <button class="back-to-top" type="button" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+  <script src="assets/polish.js" defer></script>
+</body>
+</html>

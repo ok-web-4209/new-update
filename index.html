@@ -1685,6 +1685,105 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="assets/polish.css">
+  <script type="application/ld+json" data-jsonld="legal-service">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "@id": "https://hoffman.legal/#legalservice",
+    "name": "Hoffman Legal",
+    "legalName": "Hoffman Legal",
+    "description": "Florida criminal defense, DUI defense, personal injury, and estate planning law firm. Free consultations, 24/7 availability.",
+    "url": "https://hoffman.legal/",
+    "telephone": "+1-954-459-4236",
+    "email": "david@hoffman.legal",
+    "image": "https://hoffman.legal/dhh-headshot.jpg",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "101 SW 1st Street, Suite CW12",
+      "addressLocality": "Dania Beach",
+      "addressRegion": "FL",
+      "postalCode": "33004",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 26.0546,
+      "longitude": -80.1389
+    },
+    "areaServed": [
+      { "@type": "State", "name": "Florida" },
+      { "@type": "AdministrativeArea", "name": "Broward County" },
+      { "@type": "AdministrativeArea", "name": "Miami-Dade County" },
+      { "@type": "AdministrativeArea", "name": "Palm Beach County" }
+    ],
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }],
+    "sameAs": [],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Practice Areas",
+      "itemListElement": [
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Criminal Defense","url":"https://hoffman.legal/criminal-defense.html"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"DUI Defense","url":"https://hoffman.legal/dui-defense.html"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Personal Injury","url":"https://hoffman.legal/personal-injury.html"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Drug Possession Cases","url":"https://hoffman.legal/drug-possession-cases.html"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Theft, Robbery & Burglary","url":"https://hoffman.legal/theft-robbery-burglary.html"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Assault & Battery","url":"https://hoffman.legal/assault-battery.html"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Sexual Battery Cases","url":"https://hoffman.legal/sexual-battery-cases.html"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"White Collar Crimes","url":"https://hoffman.legal/white-collar-crimes.html"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Injunctions","url":"https://hoffman.legal/injunctions.html"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Expunge & Seal Records","url":"https://hoffman.legal/expunge-seal-records.html"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Early Termination of Probation","url":"https://hoffman.legal/early-termination-of-probation.html"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Estate Planning","url":"https://hoffman.legal/estate-planning.html"}}
+      ]
+    }
+  }
+  </script>
+  <script type="application/ld+json" data-jsonld="attorney">
+  {
+    "@context": "https://schema.org",
+    "@type": "Attorney",
+    "@id": "https://hoffman.legal/#attorney",
+    "name": "David Hoffman",
+    "jobTitle": "Attorney",
+    "worksFor": { "@id": "https://hoffman.legal/#legalservice" },
+    "image": "https://hoffman.legal/dhh-headshot.jpg",
+    "url": "https://hoffman.legal/#attorney",
+    "telephone": "+1-954-459-4236",
+    "email": "david@hoffman.legal",
+    "description": "Florida attorney focused on criminal defense, DUI defense, personal injury, and estate planning. Former public defender.",
+    "knowsAbout": [
+      "Criminal Defense",
+      "DUI Defense",
+      "Personal Injury",
+      "Injunctions",
+      "Record Sealing and Expungement",
+      "Estate Planning"
+    ]
+  }
+  </script>
+  <script type="application/ld+json" data-jsonld="aggregate-rating">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://hoffman.legal/#localbusiness",
+    "name": "Hoffman Legal",
+    "url": "https://hoffman.legal/",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "bestRating": "5",
+      "worstRating": "1",
+      "reviewCount": "6"
+    }
+  }
+  </script>
 </head>
 
 <body>
@@ -1766,7 +1865,7 @@
       <h2 class="section-title">Legal Practice Areas</h2>
       <div class="divider"></div>
     </div>
-    <div class="practice-grid">
+    <div class="practice-grid" data-reveal>
             <a href="criminal-defense.html" class="practice-card" aria-label="Criminal Defense">
         <div class="practice-icon-wrap"><div class="practice-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m14.5 12.5-5 5a2.121 2.121 0 0 1-3-3l5-5"/><path d="m16.5 10.5 2-2a4.95 4.95 0 0 0-7-7l-2 2"/><path d="m7 14 2-2"/><path d="M15 6.5 9.5 12"/><path d="m6 9-2 2"/><path d="m8 11-2 2"/></svg></div></div>
         <div class="practice-content"><h3 class="practice-title">Criminal Defense</h3><p class="practice-desc">Robust defense across misdemeanors and felonies to protect your rights and freedom.</p></div>
@@ -1825,7 +1924,7 @@
       <h2 class="section-title">Why Choose Us</h2>
       <div class="divider"></div>
     </div>
-    <div class="why-grid">
+    <div class="why-grid" data-reveal>
       <div class="why-card">
         <div class="why-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m14.5 12.5-5 5a2.121 2.121 0 0 1-3-3l5-5"/><path d="m16.5 10.5 2-2a4.95 4.95 0 0 0-7-7l-2 2"/><path d="m7 14 2-2"/><path d="M15 6.5 9.5 12"/><path d="m6 9-2 2"/><path d="m8 11-2 2"/></svg>
@@ -1853,7 +1952,7 @@
   <!-- Attorney -->
   <section class="attorney-section" id="attorney">
     <div class="attorney-image" id="attorneyImage"></div>
-    <div class="attorney-content">
+    <div class="attorney-content" data-reveal>
       <p class="attorney-subtitle">Lead Counsel</p>
       <h2 class="attorney-name">David Hoffman</h2>
       <div class="attorney-divider"></div>
@@ -1870,7 +1969,7 @@
       <h2 class="section-title">Contact Us</h2>
       <div class="divider"></div>
     </div>
-    <div class="contact-grid">
+    <div class="contact-grid" data-reveal>
       <div class="contact-info">
         <h3>Request A Free Consultation</h3>
         <p>Legal emergencies don't wait. Contact us 24/7 to speak with an experienced attorney about your case. Your future is worth fighting for.</p>
@@ -1946,7 +2045,7 @@
 
   <!-- Defense Strategy -->
   <section class="section bg-secondary strategy-section">
-    <div class="strategy-content">
+    <div class="strategy-content" data-reveal>
       <div class="strategy-icon-wrap">
         <div class="strategy-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
@@ -2005,9 +2104,9 @@
     <div class="footer-bottom">
         <p class="footer-copyright">© 2025 HOFFMAN LEGAL. ALL RIGHTS RESERVED.</p>
         <div class="footer-links">
-          <a href="#">Privacy Policy</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
           <span class="footer-links-dot"></span>
-          <a href="#">Terms of Service</a>
+          <a href="terms-of-service.html">Terms of Service</a>
         </div>
       </div>
     </div>
@@ -2224,5 +2323,23 @@
       });
     });
   </script>
+
+  <!-- Modern polish: reading progress + back-to-top + sticky mobile CTA -->
+  <div class="read-progress" aria-hidden="true"></div>
+  <button class="back-to-top" type="button" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+  <nav class="mobile-cta-bar" aria-label="Quick contact">
+    <a class="mcb-call" href="tel:9544594236" aria-label="Call Hoffman Legal">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call Now
+    </a>
+    <a class="mcb-consult" href="#contact">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Free Consult
+    </a>
+  </nav>
+
+  <script src="assets/polish.js" defer></script>
 </body>
 </html>
