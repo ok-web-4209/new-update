@@ -8,6 +8,14 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- Attorney bio -->
+  <url>
+    <loc>https://hoffman.legal/attorney-david-hoffman.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Main practice areas -->
   <url>
     <loc>https://hoffman.legal/criminal-defense.html</loc>
