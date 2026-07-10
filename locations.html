@@ -102,6 +102,14 @@
     .btn-ghost:hover { background: var(--primary); color: var(--primary-foreground); }
     .cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
 
+    .city-open { background: var(--card); border: 1px solid var(--border); padding: 1.1rem 1.25rem; margin-bottom: 0.75rem; }
+    .city-open .city-head { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.6rem; }
+    .city-open .city-name { font-family: var(--font-serif); font-size: 1.15rem; color: var(--foreground); font-weight: 600; }
+    .city-open .tag { font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--primary); border: 1px solid rgba(191,155,107,0.4); padding: 0.15rem 0.45rem; border-radius: 999px; }
+    .practice-links { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .practice-links a { font-size: 0.85rem; padding: 0.35rem 0.85rem; border: 1px solid rgba(191,155,107,0.3); border-radius: 999px; color: var(--primary); }
+    .practice-links a:hover { background: var(--primary); color: var(--primary-foreground); }
+
     .legal-footer { background: hsl(222, 47%, 6%); border-top: 1px solid rgba(191, 155, 107, 0.3); padding: 2.5rem 2rem; text-align: center; color: rgba(148, 163, 184, 0.6); font-size: 0.8rem; letter-spacing: 0.05em; }
     .legal-footer-links { display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap; margin-bottom: 0.75rem; }
     .legal-footer-links a { color: rgba(148, 163, 184, 0.8); }
@@ -155,11 +163,40 @@
     <section class="county-block">
       <h2>Broward County</h2>
       <p class="county-note">Our home county &mdash; cases heard in the 17th Judicial Circuit at the Central and South Regional courthouses.</p>
+
+      <div class="city-open">
+        <div class="city-head"><span class="city-name">Dania Beach</span><span class="tag">Home Office</span></div>
+        <div class="practice-links">
+          <a href="criminal-defense-lawyer-dania-beach.html">Criminal Defense</a>
+        </div>
+      </div>
+      <div class="city-open">
+        <div class="city-head"><span class="city-name">Fort Lauderdale</span><span class="tag">Open</span></div>
+        <div class="practice-links">
+          <a href="criminal-defense-lawyer-fort-lauderdale.html">Criminal Defense</a>
+          <a href="dui-lawyer-fort-lauderdale.html">DUI Defense</a>
+          <a href="car-accident-lawyer-fort-lauderdale.html">Car Accidents</a>
+        </div>
+      </div>
+      <div class="city-open">
+        <div class="city-head"><span class="city-name">Hollywood</span><span class="tag">Open</span></div>
+        <div class="practice-links">
+          <a href="criminal-defense-lawyer-hollywood-fl.html">Criminal Defense</a>
+          <a href="dui-lawyer-hollywood-fl.html">DUI Defense</a>
+          <a href="car-accident-lawyer-hollywood-fl.html">Car Accidents</a>
+        </div>
+      </div>
+      <div class="city-open">
+        <div class="city-head"><span class="city-name">Hallandale Beach</span><span class="tag">Open</span></div>
+        <div class="practice-links">
+          <a href="criminal-defense-lawyer-hallandale-beach.html">Criminal Defense</a>
+          <a href="dui-lawyer-hallandale-beach.html">DUI Defense</a>
+          <a href="car-accident-lawyer-hallandale-beach.html">Car Accidents</a>
+        </div>
+      </div>
+
+      <p class="county-note" style="margin-top:1.25rem;">More Broward communities coming soon:</p>
       <div class="city-grid">
-        <a class="city-card" href="criminal-defense-lawyer-dania-beach.html">Dania Beach <span class="tag">Open</span></a>
-        <span class="city-card soon">Fort Lauderdale <span class="tag">Soon</span></span>
-        <span class="city-card soon">Hollywood <span class="tag">Soon</span></span>
-        <span class="city-card soon">Hallandale Beach <span class="tag">Soon</span></span>
         <span class="city-card soon">Pembroke Pines <span class="tag">Soon</span></span>
         <span class="city-card soon">Davie <span class="tag">Soon</span></span>
         <span class="city-card soon">Pompano Beach <span class="tag">Soon</span></span>
